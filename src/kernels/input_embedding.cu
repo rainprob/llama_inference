@@ -8,15 +8,16 @@ __global__ void embeddingFunctor(const int* input_ids,
                                     const int max_seq_len,
                                     const int hidden_size)
 {
+    // each thread are responsible for one value in the 2D array of the output
     int idx = blockIdx.x * blockDim.x + threadIdx.x;
     int stride = gridDim.x * blockDim.x;
 
     for(int i = idx; i < max_seq_len * hidden_size; i += stride)
     {
         int token_idx = idx / hidden_size;
-        int token = input_ids[tokenIdx];
-        int embed_idx = token_idx * hidden_size + (idx % hidden_size)
-        output[idx] = emebed_table[embed_idx]
+        int token = input_ids[token_idx];
+        int embed_idx = token * hidden_size + (idx % hidden_size);
+        output[idx] = emebed_table[embed_idx];
     }
     
 }
@@ -26,7 +27,7 @@ __global__ void embeddingFunctor(const int* input_ids,
 template <typename T>
 void launchInputEmbedding(TensorWrapper<int>* input_ids,
                             TensorWrapper<T>* output,
-                            TensorWrapper<T>* emebed_table)
+                            EmbeddingWeight<T>* emebed_table)
 {
     const int blockSize = 256;
     const int gridSize = 2048;
@@ -39,7 +40,7 @@ void launchInputEmbedding(TensorWrapper<int>* input_ids,
                                                 output->data,
                                                 emebed_table->data,
                                                 max_seq_len,
-                                                hidden_size)
+                                                hidden_size);
 
 }
 
@@ -49,6 +50,7 @@ void launchInputEmbedding(TensorWrapper<int>* input_ids,
 template void launchInputEmbedding(TensorWrapper<int>* input_ids,    
                                    TensorWrapper<float>* output,       
                                    EmbeddingWeight<float>* embed_table);
+
 template void launchInputEmbedding(TensorWrapper<int>* input_ids,    
                                    TensorWrapper<half>* output,       
                                    EmbeddingWeight<half>* embed_table);

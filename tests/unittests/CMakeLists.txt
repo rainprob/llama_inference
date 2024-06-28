@@ -6,4 +6,3 @@ target_link_libraries(
     -lcudart
     -lcudadevrt
     embeddingFunctor)
-

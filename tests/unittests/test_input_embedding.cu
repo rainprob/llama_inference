@@ -10,8 +10,10 @@
 #include <cuda_fp16.h>
 #include <cuda_runtime.h>
 
+#include "src/utils/macro.h"
 #include "src/kernels/input_embedding.h"
-
+// (RussWong)note:
+// there is no embedding cpu kernel implementation now
 // `./embedding` to test fp16 GPU kernel
 // `./embedding 1` to test fp32 GPU kernel
 
@@ -110,6 +112,9 @@ int main(int argc, char *argv[]) {
         TensorWrapper<float>* output = new TensorWrapper<float>(Device::GPU, type_float, {max_context_token_num,     hidden_size}, d_output);
         EmbeddingWeight<float> emb_table;
         emb_table.data = d_table;
+        
+        emb_table.shape = {vocab_size, hidden_size};
+        
         launchInputEmbedding(input_ids, output, &emb_table);
         CHECK(cudaMemcpy(h_output, output->data, output_size * sizeof(float), cudaMemcpyDeviceToHost));
         std::cout << "printf h_output for check" << std::endl;
@@ -164,6 +169,7 @@ int main(int argc, char *argv[]) {
         TensorWrapper<half>* output = new TensorWrapper<half>(Device::GPU, type_half, {max_context_token_num,     hidden_size}, d_output);
         EmbeddingWeight<half> emb_table;
         emb_table.data = d_table;
+        emb_table.shape = {vocab_size, hidden_size};
         launchInputEmbedding(input_ids, output, &emb_table);
         CHECK(cudaMemcpy(h_output, output->data, output_size * sizeof(half), cudaMemcpyDeviceToHost));
         std::cout << "printf h_output for check" << std::endl;

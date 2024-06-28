@@ -11,7 +11,7 @@
 #include <cuda_fp16.h>
 
 #include <src/utils/macro.h>
-
+#include <src/utils/string_utils.h>
 
 
 enum class Device
@@ -55,9 +55,9 @@ DataType getTensorType()
         return DataType::BYTES;
     }
     else {
-        return UNSUPPORTED;
+        return DataType::UNSUPPORTED;
     }
-}
+};
 
 template<typename T>
 class TensorWrapper;
@@ -105,10 +105,10 @@ struct Tensor
         std::string device_str = DeviceString();
 
         static const std::unordered_map<DataType, std::string> type_to_string{
-            {INT8, "INT8"},
-            {INT32,"INT32"},
-            {FP16, "FP16"},
-            {FP32, "FP32"},
+            {DataType::INT8, "INT8"},
+            {DataType::INT32,"INT32"},
+            {DataType::FP16, "FP16"},
+            {DataType::FP32, "FP32"},
 
         };
         return fmtstr("Tensor[where=%s, type=%s, shape=%s]",
@@ -117,7 +117,7 @@ struct Tensor
                     vec2str(shape).c_str());
     }  
 
-}
+};
 
 template <typename T>
 class TensorWrapper: public Tensor
@@ -142,7 +142,7 @@ public:
     }
 
     inline T getVal(int id) const {
-        LLM_CHECK(location == CPU);
+        LLM_CHECK(device == Device::CPU);
         return data[id];
     } // only available on CPU by []
     
@@ -150,7 +150,7 @@ public:
     {
         // TODO: add type check, this is very important, because we often naturally access GPU data, which is wrong
         // for example, I am in transpose kernel to use layer_id->getVal<int>(), which is wrong
-        LLM_CHECK(location == CPU);
+        LLM_CHECK(device == Device::CPU);
         return getVal(0);
     }
 
@@ -169,9 +169,9 @@ public:
         std::string device_str = DeviceString();
 
         static const std::unordered_map<DataType, std::string> type_to_string{
-            {INT8, "INT8"},
-            {FP16, "FP16"},
-            {FP32, "FP32"},
+            {DataType::INT8, "INT8"},
+            {DataType::FP16, "FP16"},
+            {DataType::FP32, "FP32"},
 
         };
         return fmtstr("Tensor[where=%s, type=%s, shape=%s, data=%p]",
@@ -180,7 +180,7 @@ public:
                     vec2str(shape).c_str(),
                     data);
     }    
-}
+};
 
 
 
@@ -275,4 +275,4 @@ struct TensorMap
         return ss.str();
     }
 
-}
+};
