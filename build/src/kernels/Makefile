@@ -131,42 +131,42 @@ embeddingFunctor/fast:
 .PHONY : embeddingFunctor/fast
 
 # Convenience name for target.
-src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/rule:
-	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/rule
-.PHONY : src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/rule
+src/kernels/CMakeFiles/causalMaskFunctor.dir/rule:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/kernels/CMakeFiles/causalMaskFunctor.dir/rule
+.PHONY : src/kernels/CMakeFiles/causalMaskFunctor.dir/rule
 
 # Convenience name for target.
-calPaddingoffsetFunctor: src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/rule
-.PHONY : calPaddingoffsetFunctor
+causalMaskFunctor: src/kernels/CMakeFiles/causalMaskFunctor.dir/rule
+.PHONY : causalMaskFunctor
 
 # fast build rule for target.
-calPaddingoffsetFunctor/fast:
-	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/build.make src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/build
-.PHONY : calPaddingoffsetFunctor/fast
+causalMaskFunctor/fast:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/causalMaskFunctor.dir/build.make src/kernels/CMakeFiles/causalMaskFunctor.dir/build
+.PHONY : causalMaskFunctor/fast
 
-cal_paddingoffset.o: cal_paddingoffset.cu.o
-.PHONY : cal_paddingoffset.o
+causal_mask.o: causal_mask.cu.o
+.PHONY : causal_mask.o
 
 # target to build an object file
-cal_paddingoffset.cu.o:
-	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/build.make src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/cal_paddingoffset.cu.o
-.PHONY : cal_paddingoffset.cu.o
+causal_mask.cu.o:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/causalMaskFunctor.dir/build.make src/kernels/CMakeFiles/causalMaskFunctor.dir/causal_mask.cu.o
+.PHONY : causal_mask.cu.o
 
-cal_paddingoffset.i: cal_paddingoffset.cu.i
-.PHONY : cal_paddingoffset.i
+causal_mask.i: causal_mask.cu.i
+.PHONY : causal_mask.i
 
 # target to preprocess a source file
-cal_paddingoffset.cu.i:
-	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/build.make src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/cal_paddingoffset.cu.i
-.PHONY : cal_paddingoffset.cu.i
+causal_mask.cu.i:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/causalMaskFunctor.dir/build.make src/kernels/CMakeFiles/causalMaskFunctor.dir/causal_mask.cu.i
+.PHONY : causal_mask.cu.i
 
-cal_paddingoffset.s: cal_paddingoffset.cu.s
-.PHONY : cal_paddingoffset.s
+causal_mask.s: causal_mask.cu.s
+.PHONY : causal_mask.s
 
 # target to generate assembly for a file
-cal_paddingoffset.cu.s:
-	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/build.make src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/cal_paddingoffset.cu.s
-.PHONY : cal_paddingoffset.cu.s
+causal_mask.cu.s:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/causalMaskFunctor.dir/build.make src/kernels/CMakeFiles/causalMaskFunctor.dir/causal_mask.cu.s
+.PHONY : causal_mask.cu.s
 
 input_embedding.o: input_embedding.cu.o
 .PHONY : input_embedding.o
@@ -200,11 +200,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... calPaddingoffsetFunctor"
+	@echo "... causalMaskFunctor"
 	@echo "... embeddingFunctor"
-	@echo "... cal_paddingoffset.o"
-	@echo "... cal_paddingoffset.i"
-	@echo "... cal_paddingoffset.s"
+	@echo "... causal_mask.o"
+	@echo "... causal_mask.i"
+	@echo "... causal_mask.s"
 	@echo "... input_embedding.o"
 	@echo "... input_embedding.i"
 	@echo "... input_embedding.s"

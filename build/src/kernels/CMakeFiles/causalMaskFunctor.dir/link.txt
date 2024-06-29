@@ -1,0 +1,3 @@
+/usr/bin/ar qc ../../lib/libcausalMaskFunctor.a CMakeFiles/causalMaskFunctor.dir/causal_mask.cu.o
+/usr/bin/ar q ../../lib/libcausalMaskFunctor.a CMakeFiles/causalMaskFunctor.dir/cmake_device_link.o
+/usr/bin/ranlib ../../lib/libcausalMaskFunctor.a

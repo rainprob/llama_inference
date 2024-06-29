@@ -130,17 +130,17 @@ embeddingFunctor/fast:
 .PHONY : embeddingFunctor/fast
 
 #=============================================================================
-# Target rules for targets named calPaddingoffsetFunctor
+# Target rules for targets named causalMaskFunctor
 
 # Build rule for target.
-calPaddingoffsetFunctor: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calPaddingoffsetFunctor
-.PHONY : calPaddingoffsetFunctor
+causalMaskFunctor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 causalMaskFunctor
+.PHONY : causalMaskFunctor
 
 # fast build rule for target.
-calPaddingoffsetFunctor/fast:
-	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/build.make src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/build
-.PHONY : calPaddingoffsetFunctor/fast
+causalMaskFunctor/fast:
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/causalMaskFunctor.dir/build.make src/kernels/CMakeFiles/causalMaskFunctor.dir/build
+.PHONY : causalMaskFunctor/fast
 
 #=============================================================================
 # Target rules for targets named embedding
@@ -156,17 +156,17 @@ embedding/fast:
 .PHONY : embedding/fast
 
 #=============================================================================
-# Target rules for targets named test_cal_paddingoffset
+# Target rules for targets named causalmask
 
 # Build rule for target.
-test_cal_paddingoffset: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_cal_paddingoffset
-.PHONY : test_cal_paddingoffset
+causalmask: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 causalmask
+.PHONY : causalmask
 
 # fast build rule for target.
-test_cal_paddingoffset/fast:
-	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/build.make tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/build
-.PHONY : test_cal_paddingoffset/fast
+causalmask/fast:
+	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/causalmask.dir/build.make tests/unittests/CMakeFiles/causalmask.dir/build
+.PHONY : causalmask/fast
 
 # Help Target
 help:
@@ -176,10 +176,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... calPaddingoffsetFunctor"
+	@echo "... causalMaskFunctor"
+	@echo "... causalmask"
 	@echo "... embedding"
 	@echo "... embeddingFunctor"
-	@echo "... test_cal_paddingoffset"
 .PHONY : help
 
 

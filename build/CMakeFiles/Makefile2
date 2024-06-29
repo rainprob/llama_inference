@@ -97,7 +97,7 @@ src/clean: src/kernels/clean
 
 # Recursive "all" directory target.
 src/kernels/all: src/kernels/CMakeFiles/embeddingFunctor.dir/all
-src/kernels/all: src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/all
+src/kernels/all: src/kernels/CMakeFiles/causalMaskFunctor.dir/all
 .PHONY : src/kernels/all
 
 # Recursive "preinstall" directory target.
@@ -106,7 +106,7 @@ src/kernels/preinstall:
 
 # Recursive "clean" directory target.
 src/kernels/clean: src/kernels/CMakeFiles/embeddingFunctor.dir/clean
-src/kernels/clean: src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/clean
+src/kernels/clean: src/kernels/CMakeFiles/causalMaskFunctor.dir/clean
 .PHONY : src/kernels/clean
 
 #=============================================================================
@@ -129,7 +129,7 @@ tests/clean: tests/unittests/clean
 
 # Recursive "all" directory target.
 tests/unittests/all: tests/unittests/CMakeFiles/embedding.dir/all
-tests/unittests/all: tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/all
+tests/unittests/all: tests/unittests/CMakeFiles/causalmask.dir/all
 .PHONY : tests/unittests/all
 
 # Recursive "preinstall" directory target.
@@ -138,7 +138,7 @@ tests/unittests/preinstall:
 
 # Recursive "clean" directory target.
 tests/unittests/clean: tests/unittests/CMakeFiles/embedding.dir/clean
-tests/unittests/clean: tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/clean
+tests/unittests/clean: tests/unittests/CMakeFiles/causalmask.dir/clean
 .PHONY : tests/unittests/clean
 
 #=============================================================================
@@ -148,7 +148,7 @@ tests/unittests/clean: tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/cle
 src/kernels/CMakeFiles/embeddingFunctor.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/embeddingFunctor.dir/build.make src/kernels/CMakeFiles/embeddingFunctor.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/embeddingFunctor.dir/build.make src/kernels/CMakeFiles/embeddingFunctor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=6,7,8 "Built target embeddingFunctor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=8,9,10 "Built target embeddingFunctor"
 .PHONY : src/kernels/CMakeFiles/embeddingFunctor.dir/all
 
 # Build rule for subdir invocation for target.
@@ -168,30 +168,30 @@ src/kernels/CMakeFiles/embeddingFunctor.dir/clean:
 .PHONY : src/kernels/CMakeFiles/embeddingFunctor.dir/clean
 
 #=============================================================================
-# Target rules for target src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir
+# Target rules for target src/kernels/CMakeFiles/causalMaskFunctor.dir
 
 # All Build rule for target.
-src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/all:
-	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/build.make src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/depend
-	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/build.make src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=1,2,3 "Built target calPaddingoffsetFunctor"
-.PHONY : src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/all
+src/kernels/CMakeFiles/causalMaskFunctor.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/causalMaskFunctor.dir/build.make src/kernels/CMakeFiles/causalMaskFunctor.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/causalMaskFunctor.dir/build.make src/kernels/CMakeFiles/causalMaskFunctor.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=1,2,3 "Built target causalMaskFunctor"
+.PHONY : src/kernels/CMakeFiles/causalMaskFunctor.dir/all
 
 # Build rule for subdir invocation for target.
-src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/rule: cmake_check_build_system
+src/kernels/CMakeFiles/causalMaskFunctor.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/autodl-tmp/llama_inference/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/kernels/CMakeFiles/causalMaskFunctor.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/autodl-tmp/llama_inference/build/CMakeFiles 0
-.PHONY : src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/rule
+.PHONY : src/kernels/CMakeFiles/causalMaskFunctor.dir/rule
 
 # Convenience name for target.
-calPaddingoffsetFunctor: src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/rule
-.PHONY : calPaddingoffsetFunctor
+causalMaskFunctor: src/kernels/CMakeFiles/causalMaskFunctor.dir/rule
+.PHONY : causalMaskFunctor
 
 # clean rule for target.
-src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/clean:
-	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/build.make src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/clean
-.PHONY : src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/clean
+src/kernels/CMakeFiles/causalMaskFunctor.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/causalMaskFunctor.dir/build.make src/kernels/CMakeFiles/causalMaskFunctor.dir/clean
+.PHONY : src/kernels/CMakeFiles/causalMaskFunctor.dir/clean
 
 #=============================================================================
 # Target rules for target tests/unittests/CMakeFiles/embedding.dir
@@ -200,7 +200,7 @@ src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/clean:
 tests/unittests/CMakeFiles/embedding.dir/all: src/kernels/CMakeFiles/embeddingFunctor.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/embedding.dir/build.make tests/unittests/CMakeFiles/embedding.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/embedding.dir/build.make tests/unittests/CMakeFiles/embedding.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=4,5 "Built target embedding"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=6,7 "Built target embedding"
 .PHONY : tests/unittests/CMakeFiles/embedding.dir/all
 
 # Build rule for subdir invocation for target.
@@ -220,30 +220,30 @@ tests/unittests/CMakeFiles/embedding.dir/clean:
 .PHONY : tests/unittests/CMakeFiles/embedding.dir/clean
 
 #=============================================================================
-# Target rules for target tests/unittests/CMakeFiles/test_cal_paddingoffset.dir
+# Target rules for target tests/unittests/CMakeFiles/causalmask.dir
 
 # All Build rule for target.
-tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/all: src/kernels/CMakeFiles/calPaddingoffsetFunctor.dir/all
-	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/build.make tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/depend
-	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/build.make tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=9,10 "Built target test_cal_paddingoffset"
-.PHONY : tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/all
+tests/unittests/CMakeFiles/causalmask.dir/all: src/kernels/CMakeFiles/causalMaskFunctor.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/causalmask.dir/build.make tests/unittests/CMakeFiles/causalmask.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/causalmask.dir/build.make tests/unittests/CMakeFiles/causalmask.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=4,5 "Built target causalmask"
+.PHONY : tests/unittests/CMakeFiles/causalmask.dir/all
 
 # Build rule for subdir invocation for target.
-tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/rule: cmake_check_build_system
+tests/unittests/CMakeFiles/causalmask.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/autodl-tmp/llama_inference/build/CMakeFiles 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/unittests/CMakeFiles/causalmask.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/autodl-tmp/llama_inference/build/CMakeFiles 0
-.PHONY : tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/rule
+.PHONY : tests/unittests/CMakeFiles/causalmask.dir/rule
 
 # Convenience name for target.
-test_cal_paddingoffset: tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/rule
-.PHONY : test_cal_paddingoffset
+causalmask: tests/unittests/CMakeFiles/causalmask.dir/rule
+.PHONY : causalmask
 
 # clean rule for target.
-tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/clean:
-	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/build.make tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/clean
-.PHONY : tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/clean
+tests/unittests/CMakeFiles/causalmask.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/causalmask.dir/build.make tests/unittests/CMakeFiles/causalmask.dir/clean
+.PHONY : tests/unittests/CMakeFiles/causalmask.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

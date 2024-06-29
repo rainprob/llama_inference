@@ -131,42 +131,42 @@ embedding/fast:
 .PHONY : embedding/fast
 
 # Convenience name for target.
-tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/rule:
-	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/rule
-.PHONY : tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/rule
+tests/unittests/CMakeFiles/causalmask.dir/rule:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/unittests/CMakeFiles/causalmask.dir/rule
+.PHONY : tests/unittests/CMakeFiles/causalmask.dir/rule
 
 # Convenience name for target.
-test_cal_paddingoffset: tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/rule
-.PHONY : test_cal_paddingoffset
+causalmask: tests/unittests/CMakeFiles/causalmask.dir/rule
+.PHONY : causalmask
 
 # fast build rule for target.
-test_cal_paddingoffset/fast:
-	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/build.make tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/build
-.PHONY : test_cal_paddingoffset/fast
+causalmask/fast:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/causalmask.dir/build.make tests/unittests/CMakeFiles/causalmask.dir/build
+.PHONY : causalmask/fast
 
-test_cal_paddingoffset.o: test_cal_paddingoffset.cu.o
-.PHONY : test_cal_paddingoffset.o
+test_casual_mask.o: test_casual_mask.cu.o
+.PHONY : test_casual_mask.o
 
 # target to build an object file
-test_cal_paddingoffset.cu.o:
-	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/build.make tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/test_cal_paddingoffset.cu.o
-.PHONY : test_cal_paddingoffset.cu.o
+test_casual_mask.cu.o:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/causalmask.dir/build.make tests/unittests/CMakeFiles/causalmask.dir/test_casual_mask.cu.o
+.PHONY : test_casual_mask.cu.o
 
-test_cal_paddingoffset.i: test_cal_paddingoffset.cu.i
-.PHONY : test_cal_paddingoffset.i
+test_casual_mask.i: test_casual_mask.cu.i
+.PHONY : test_casual_mask.i
 
 # target to preprocess a source file
-test_cal_paddingoffset.cu.i:
-	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/build.make tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/test_cal_paddingoffset.cu.i
-.PHONY : test_cal_paddingoffset.cu.i
+test_casual_mask.cu.i:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/causalmask.dir/build.make tests/unittests/CMakeFiles/causalmask.dir/test_casual_mask.cu.i
+.PHONY : test_casual_mask.cu.i
 
-test_cal_paddingoffset.s: test_cal_paddingoffset.cu.s
-.PHONY : test_cal_paddingoffset.s
+test_casual_mask.s: test_casual_mask.cu.s
+.PHONY : test_casual_mask.s
 
 # target to generate assembly for a file
-test_cal_paddingoffset.cu.s:
-	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/build.make tests/unittests/CMakeFiles/test_cal_paddingoffset.dir/test_cal_paddingoffset.cu.s
-.PHONY : test_cal_paddingoffset.cu.s
+test_casual_mask.cu.s:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/causalmask.dir/build.make tests/unittests/CMakeFiles/causalmask.dir/test_casual_mask.cu.s
+.PHONY : test_casual_mask.cu.s
 
 test_input_embedding.o: test_input_embedding.cu.o
 .PHONY : test_input_embedding.o
@@ -200,11 +200,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... causalmask"
 	@echo "... embedding"
-	@echo "... test_cal_paddingoffset"
-	@echo "... test_cal_paddingoffset.o"
-	@echo "... test_cal_paddingoffset.i"
-	@echo "... test_cal_paddingoffset.s"
+	@echo "... test_casual_mask.o"
+	@echo "... test_casual_mask.i"
+	@echo "... test_casual_mask.s"
 	@echo "... test_input_embedding.o"
 	@echo "... test_input_embedding.i"
 	@echo "... test_input_embedding.s"
