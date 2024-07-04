@@ -60,7 +60,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "src/kernels/CMakeFiles/embeddingFunctor.dir/DependInfo.cmake"
-  "src/kernels/CMakeFiles/causalMaskFunctor.dir/DependInfo.cmake"
+  "src/kernels/CMakeFiles/rmsNormFunctor.dir/DependInfo.cmake"
   "tests/unittests/CMakeFiles/embedding.dir/DependInfo.cmake"
-  "tests/unittests/CMakeFiles/causalmask.dir/DependInfo.cmake"
+  "tests/unittests/CMakeFiles/rmsnorm.dir/DependInfo.cmake"
   )

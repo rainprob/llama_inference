@@ -131,42 +131,18 @@ embedding/fast:
 .PHONY : embedding/fast
 
 # Convenience name for target.
-tests/unittests/CMakeFiles/causalmask.dir/rule:
-	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/unittests/CMakeFiles/causalmask.dir/rule
-.PHONY : tests/unittests/CMakeFiles/causalmask.dir/rule
+tests/unittests/CMakeFiles/rmsnorm.dir/rule:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/unittests/CMakeFiles/rmsnorm.dir/rule
+.PHONY : tests/unittests/CMakeFiles/rmsnorm.dir/rule
 
 # Convenience name for target.
-causalmask: tests/unittests/CMakeFiles/causalmask.dir/rule
-.PHONY : causalmask
+rmsnorm: tests/unittests/CMakeFiles/rmsnorm.dir/rule
+.PHONY : rmsnorm
 
 # fast build rule for target.
-causalmask/fast:
-	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/causalmask.dir/build.make tests/unittests/CMakeFiles/causalmask.dir/build
-.PHONY : causalmask/fast
-
-test_casual_mask.o: test_casual_mask.cu.o
-.PHONY : test_casual_mask.o
-
-# target to build an object file
-test_casual_mask.cu.o:
-	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/causalmask.dir/build.make tests/unittests/CMakeFiles/causalmask.dir/test_casual_mask.cu.o
-.PHONY : test_casual_mask.cu.o
-
-test_casual_mask.i: test_casual_mask.cu.i
-.PHONY : test_casual_mask.i
-
-# target to preprocess a source file
-test_casual_mask.cu.i:
-	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/causalmask.dir/build.make tests/unittests/CMakeFiles/causalmask.dir/test_casual_mask.cu.i
-.PHONY : test_casual_mask.cu.i
-
-test_casual_mask.s: test_casual_mask.cu.s
-.PHONY : test_casual_mask.s
-
-# target to generate assembly for a file
-test_casual_mask.cu.s:
-	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/causalmask.dir/build.make tests/unittests/CMakeFiles/causalmask.dir/test_casual_mask.cu.s
-.PHONY : test_casual_mask.cu.s
+rmsnorm/fast:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/rmsnorm.dir/build.make tests/unittests/CMakeFiles/rmsnorm.dir/build
+.PHONY : rmsnorm/fast
 
 test_input_embedding.o: test_input_embedding.cu.o
 .PHONY : test_input_embedding.o
@@ -192,6 +168,30 @@ test_input_embedding.cu.s:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/embedding.dir/build.make tests/unittests/CMakeFiles/embedding.dir/test_input_embedding.cu.s
 .PHONY : test_input_embedding.cu.s
 
+test_rmsnorm.o: test_rmsnorm.cu.o
+.PHONY : test_rmsnorm.o
+
+# target to build an object file
+test_rmsnorm.cu.o:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/rmsnorm.dir/build.make tests/unittests/CMakeFiles/rmsnorm.dir/test_rmsnorm.cu.o
+.PHONY : test_rmsnorm.cu.o
+
+test_rmsnorm.i: test_rmsnorm.cu.i
+.PHONY : test_rmsnorm.i
+
+# target to preprocess a source file
+test_rmsnorm.cu.i:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/rmsnorm.dir/build.make tests/unittests/CMakeFiles/rmsnorm.dir/test_rmsnorm.cu.i
+.PHONY : test_rmsnorm.cu.i
+
+test_rmsnorm.s: test_rmsnorm.cu.s
+.PHONY : test_rmsnorm.s
+
+# target to generate assembly for a file
+test_rmsnorm.cu.s:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/rmsnorm.dir/build.make tests/unittests/CMakeFiles/rmsnorm.dir/test_rmsnorm.cu.s
+.PHONY : test_rmsnorm.cu.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -200,14 +200,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... causalmask"
 	@echo "... embedding"
-	@echo "... test_casual_mask.o"
-	@echo "... test_casual_mask.i"
-	@echo "... test_casual_mask.s"
+	@echo "... rmsnorm"
 	@echo "... test_input_embedding.o"
 	@echo "... test_input_embedding.i"
 	@echo "... test_input_embedding.s"
+	@echo "... test_rmsnorm.o"
+	@echo "... test_rmsnorm.i"
+	@echo "... test_rmsnorm.s"
 .PHONY : help
 
 

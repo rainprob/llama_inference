@@ -131,42 +131,18 @@ embeddingFunctor/fast:
 .PHONY : embeddingFunctor/fast
 
 # Convenience name for target.
-src/kernels/CMakeFiles/causalMaskFunctor.dir/rule:
-	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/kernels/CMakeFiles/causalMaskFunctor.dir/rule
-.PHONY : src/kernels/CMakeFiles/causalMaskFunctor.dir/rule
+src/kernels/CMakeFiles/rmsNormFunctor.dir/rule:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/kernels/CMakeFiles/rmsNormFunctor.dir/rule
+.PHONY : src/kernels/CMakeFiles/rmsNormFunctor.dir/rule
 
 # Convenience name for target.
-causalMaskFunctor: src/kernels/CMakeFiles/causalMaskFunctor.dir/rule
-.PHONY : causalMaskFunctor
+rmsNormFunctor: src/kernels/CMakeFiles/rmsNormFunctor.dir/rule
+.PHONY : rmsNormFunctor
 
 # fast build rule for target.
-causalMaskFunctor/fast:
-	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/causalMaskFunctor.dir/build.make src/kernels/CMakeFiles/causalMaskFunctor.dir/build
-.PHONY : causalMaskFunctor/fast
-
-causal_mask.o: causal_mask.cu.o
-.PHONY : causal_mask.o
-
-# target to build an object file
-causal_mask.cu.o:
-	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/causalMaskFunctor.dir/build.make src/kernels/CMakeFiles/causalMaskFunctor.dir/causal_mask.cu.o
-.PHONY : causal_mask.cu.o
-
-causal_mask.i: causal_mask.cu.i
-.PHONY : causal_mask.i
-
-# target to preprocess a source file
-causal_mask.cu.i:
-	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/causalMaskFunctor.dir/build.make src/kernels/CMakeFiles/causalMaskFunctor.dir/causal_mask.cu.i
-.PHONY : causal_mask.cu.i
-
-causal_mask.s: causal_mask.cu.s
-.PHONY : causal_mask.s
-
-# target to generate assembly for a file
-causal_mask.cu.s:
-	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/causalMaskFunctor.dir/build.make src/kernels/CMakeFiles/causalMaskFunctor.dir/causal_mask.cu.s
-.PHONY : causal_mask.cu.s
+rmsNormFunctor/fast:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/rmsNormFunctor.dir/build.make src/kernels/CMakeFiles/rmsNormFunctor.dir/build
+.PHONY : rmsNormFunctor/fast
 
 input_embedding.o: input_embedding.cu.o
 .PHONY : input_embedding.o
@@ -192,6 +168,30 @@ input_embedding.cu.s:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/embeddingFunctor.dir/build.make src/kernels/CMakeFiles/embeddingFunctor.dir/input_embedding.cu.s
 .PHONY : input_embedding.cu.s
 
+rms_norm.o: rms_norm.cu.o
+.PHONY : rms_norm.o
+
+# target to build an object file
+rms_norm.cu.o:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/rmsNormFunctor.dir/build.make src/kernels/CMakeFiles/rmsNormFunctor.dir/rms_norm.cu.o
+.PHONY : rms_norm.cu.o
+
+rms_norm.i: rms_norm.cu.i
+.PHONY : rms_norm.i
+
+# target to preprocess a source file
+rms_norm.cu.i:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/rmsNormFunctor.dir/build.make src/kernels/CMakeFiles/rmsNormFunctor.dir/rms_norm.cu.i
+.PHONY : rms_norm.cu.i
+
+rms_norm.s: rms_norm.cu.s
+.PHONY : rms_norm.s
+
+# target to generate assembly for a file
+rms_norm.cu.s:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/rmsNormFunctor.dir/build.make src/kernels/CMakeFiles/rmsNormFunctor.dir/rms_norm.cu.s
+.PHONY : rms_norm.cu.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -200,14 +200,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... causalMaskFunctor"
 	@echo "... embeddingFunctor"
-	@echo "... causal_mask.o"
-	@echo "... causal_mask.i"
-	@echo "... causal_mask.s"
+	@echo "... rmsNormFunctor"
 	@echo "... input_embedding.o"
 	@echo "... input_embedding.i"
 	@echo "... input_embedding.s"
+	@echo "... rms_norm.o"
+	@echo "... rms_norm.i"
+	@echo "... rms_norm.s"
 .PHONY : help
 
 

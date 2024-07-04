@@ -130,17 +130,17 @@ embeddingFunctor/fast:
 .PHONY : embeddingFunctor/fast
 
 #=============================================================================
-# Target rules for targets named causalMaskFunctor
+# Target rules for targets named rmsNormFunctor
 
 # Build rule for target.
-causalMaskFunctor: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 causalMaskFunctor
-.PHONY : causalMaskFunctor
+rmsNormFunctor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rmsNormFunctor
+.PHONY : rmsNormFunctor
 
 # fast build rule for target.
-causalMaskFunctor/fast:
-	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/causalMaskFunctor.dir/build.make src/kernels/CMakeFiles/causalMaskFunctor.dir/build
-.PHONY : causalMaskFunctor/fast
+rmsNormFunctor/fast:
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/rmsNormFunctor.dir/build.make src/kernels/CMakeFiles/rmsNormFunctor.dir/build
+.PHONY : rmsNormFunctor/fast
 
 #=============================================================================
 # Target rules for targets named embedding
@@ -156,17 +156,17 @@ embedding/fast:
 .PHONY : embedding/fast
 
 #=============================================================================
-# Target rules for targets named causalmask
+# Target rules for targets named rmsnorm
 
 # Build rule for target.
-causalmask: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 causalmask
-.PHONY : causalmask
+rmsnorm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rmsnorm
+.PHONY : rmsnorm
 
 # fast build rule for target.
-causalmask/fast:
-	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/causalmask.dir/build.make tests/unittests/CMakeFiles/causalmask.dir/build
-.PHONY : causalmask/fast
+rmsnorm/fast:
+	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/rmsnorm.dir/build.make tests/unittests/CMakeFiles/rmsnorm.dir/build
+.PHONY : rmsnorm/fast
 
 # Help Target
 help:
@@ -176,10 +176,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... causalMaskFunctor"
-	@echo "... causalmask"
 	@echo "... embedding"
 	@echo "... embeddingFunctor"
+	@echo "... rmsNormFunctor"
+	@echo "... rmsnorm"
 .PHONY : help
 
 
