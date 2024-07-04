@@ -6,3 +6,14 @@ target_link_libraries(
     -lcudart
     -lcudadevrt
     embeddingFunctor)
+
+
+
+add_executable(rmsnorm
+    test_rmsnorm.cu
+)
+target_link_libraries(
+    rmsnorm PUBLIC
+    -lcudart
+    -lcudadevrt
+    rmsNormFunctor)
