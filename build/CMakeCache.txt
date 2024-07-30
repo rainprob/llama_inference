@@ -343,6 +343,9 @@ CUDA_nvToolsExt_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libnvToolsExt.so
 //Path to a library.
 CUDA_rt_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.a
 
+//Dependencies for the target
+linear_LIB_DEPENDS:STATIC=general;-lcudart;general;-lcublas;general;cublasWrapper;
+
 //Value Computed by CMake
 oneLLM_BINARY_DIR:STATIC=/root/autodl-tmp/llama_inference/build
 

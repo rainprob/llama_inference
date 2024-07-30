@@ -143,6 +143,32 @@ rmsNormFunctor/fast:
 .PHONY : rmsNormFunctor/fast
 
 #=============================================================================
+# Target rules for targets named cublasWrapper
+
+# Build rule for target.
+cublasWrapper: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cublasWrapper
+.PHONY : cublasWrapper
+
+# fast build rule for target.
+cublasWrapper/fast:
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/cublasWrapper.dir/build.make src/kernels/CMakeFiles/cublasWrapper.dir/build
+.PHONY : cublasWrapper/fast
+
+#=============================================================================
+# Target rules for targets named linear
+
+# Build rule for target.
+linear: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linear
+.PHONY : linear
+
+# fast build rule for target.
+linear/fast:
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/linear.dir/build.make src/kernels/CMakeFiles/linear.dir/build
+.PHONY : linear/fast
+
+#=============================================================================
 # Target rules for targets named embedding
 
 # Build rule for target.
@@ -168,6 +194,19 @@ rmsnorm/fast:
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/rmsnorm.dir/build.make tests/unittests/CMakeFiles/rmsnorm.dir/build
 .PHONY : rmsnorm/fast
 
+#=============================================================================
+# Target rules for targets named testlinear
+
+# Build rule for target.
+testlinear: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 testlinear
+.PHONY : testlinear
+
+# fast build rule for target.
+testlinear/fast:
+	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/testlinear.dir/build.make tests/unittests/CMakeFiles/testlinear.dir/build
+.PHONY : testlinear/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -176,10 +215,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... cublasWrapper"
 	@echo "... embedding"
 	@echo "... embeddingFunctor"
+	@echo "... linear"
 	@echo "... rmsNormFunctor"
 	@echo "... rmsnorm"
+	@echo "... testlinear"
 .PHONY : help
 
 

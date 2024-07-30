@@ -144,6 +144,20 @@ rmsnorm/fast:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/rmsnorm.dir/build.make tests/unittests/CMakeFiles/rmsnorm.dir/build
 .PHONY : rmsnorm/fast
 
+# Convenience name for target.
+tests/unittests/CMakeFiles/testlinear.dir/rule:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/unittests/CMakeFiles/testlinear.dir/rule
+.PHONY : tests/unittests/CMakeFiles/testlinear.dir/rule
+
+# Convenience name for target.
+testlinear: tests/unittests/CMakeFiles/testlinear.dir/rule
+.PHONY : testlinear
+
+# fast build rule for target.
+testlinear/fast:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/testlinear.dir/build.make tests/unittests/CMakeFiles/testlinear.dir/build
+.PHONY : testlinear/fast
+
 test_input_embedding.o: test_input_embedding.cu.o
 .PHONY : test_input_embedding.o
 
@@ -167,6 +181,30 @@ test_input_embedding.s: test_input_embedding.cu.s
 test_input_embedding.cu.s:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/embedding.dir/build.make tests/unittests/CMakeFiles/embedding.dir/test_input_embedding.cu.s
 .PHONY : test_input_embedding.cu.s
+
+test_linear.o: test_linear.cu.o
+.PHONY : test_linear.o
+
+# target to build an object file
+test_linear.cu.o:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/testlinear.dir/build.make tests/unittests/CMakeFiles/testlinear.dir/test_linear.cu.o
+.PHONY : test_linear.cu.o
+
+test_linear.i: test_linear.cu.i
+.PHONY : test_linear.i
+
+# target to preprocess a source file
+test_linear.cu.i:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/testlinear.dir/build.make tests/unittests/CMakeFiles/testlinear.dir/test_linear.cu.i
+.PHONY : test_linear.cu.i
+
+test_linear.s: test_linear.cu.s
+.PHONY : test_linear.s
+
+# target to generate assembly for a file
+test_linear.cu.s:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/testlinear.dir/build.make tests/unittests/CMakeFiles/testlinear.dir/test_linear.cu.s
+.PHONY : test_linear.cu.s
 
 test_rmsnorm.o: test_rmsnorm.cu.o
 .PHONY : test_rmsnorm.o
@@ -202,9 +240,13 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... embedding"
 	@echo "... rmsnorm"
+	@echo "... testlinear"
 	@echo "... test_input_embedding.o"
 	@echo "... test_input_embedding.i"
 	@echo "... test_input_embedding.s"
+	@echo "... test_linear.o"
+	@echo "... test_linear.i"
+	@echo "... test_linear.s"
 	@echo "... test_rmsnorm.o"
 	@echo "... test_rmsnorm.i"
 	@echo "... test_rmsnorm.s"

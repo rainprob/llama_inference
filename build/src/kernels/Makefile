@@ -144,6 +144,58 @@ rmsNormFunctor/fast:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/rmsNormFunctor.dir/build.make src/kernels/CMakeFiles/rmsNormFunctor.dir/build
 .PHONY : rmsNormFunctor/fast
 
+# Convenience name for target.
+src/kernels/CMakeFiles/cublasWrapper.dir/rule:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/kernels/CMakeFiles/cublasWrapper.dir/rule
+.PHONY : src/kernels/CMakeFiles/cublasWrapper.dir/rule
+
+# Convenience name for target.
+cublasWrapper: src/kernels/CMakeFiles/cublasWrapper.dir/rule
+.PHONY : cublasWrapper
+
+# fast build rule for target.
+cublasWrapper/fast:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/cublasWrapper.dir/build.make src/kernels/CMakeFiles/cublasWrapper.dir/build
+.PHONY : cublasWrapper/fast
+
+# Convenience name for target.
+src/kernels/CMakeFiles/linear.dir/rule:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/kernels/CMakeFiles/linear.dir/rule
+.PHONY : src/kernels/CMakeFiles/linear.dir/rule
+
+# Convenience name for target.
+linear: src/kernels/CMakeFiles/linear.dir/rule
+.PHONY : linear
+
+# fast build rule for target.
+linear/fast:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/linear.dir/build.make src/kernels/CMakeFiles/linear.dir/build
+.PHONY : linear/fast
+
+cublas_utils.o: cublas_utils.cc.o
+.PHONY : cublas_utils.o
+
+# target to build an object file
+cublas_utils.cc.o:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/cublasWrapper.dir/build.make src/kernels/CMakeFiles/cublasWrapper.dir/cublas_utils.cc.o
+.PHONY : cublas_utils.cc.o
+
+cublas_utils.i: cublas_utils.cc.i
+.PHONY : cublas_utils.i
+
+# target to preprocess a source file
+cublas_utils.cc.i:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/cublasWrapper.dir/build.make src/kernels/CMakeFiles/cublasWrapper.dir/cublas_utils.cc.i
+.PHONY : cublas_utils.cc.i
+
+cublas_utils.s: cublas_utils.cc.s
+.PHONY : cublas_utils.s
+
+# target to generate assembly for a file
+cublas_utils.cc.s:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/cublasWrapper.dir/build.make src/kernels/CMakeFiles/cublasWrapper.dir/cublas_utils.cc.s
+.PHONY : cublas_utils.cc.s
+
 input_embedding.o: input_embedding.cu.o
 .PHONY : input_embedding.o
 
@@ -167,6 +219,30 @@ input_embedding.s: input_embedding.cu.s
 input_embedding.cu.s:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/embeddingFunctor.dir/build.make src/kernels/CMakeFiles/embeddingFunctor.dir/input_embedding.cu.s
 .PHONY : input_embedding.cu.s
+
+linear.o: linear.cu.o
+.PHONY : linear.o
+
+# target to build an object file
+linear.cu.o:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/linear.dir/build.make src/kernels/CMakeFiles/linear.dir/linear.cu.o
+.PHONY : linear.cu.o
+
+linear.i: linear.cu.i
+.PHONY : linear.i
+
+# target to preprocess a source file
+linear.cu.i:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/linear.dir/build.make src/kernels/CMakeFiles/linear.dir/linear.cu.i
+.PHONY : linear.cu.i
+
+linear.s: linear.cu.s
+.PHONY : linear.s
+
+# target to generate assembly for a file
+linear.cu.s:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/linear.dir/build.make src/kernels/CMakeFiles/linear.dir/linear.cu.s
+.PHONY : linear.cu.s
 
 rms_norm.o: rms_norm.cu.o
 .PHONY : rms_norm.o
@@ -200,11 +276,19 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... cublasWrapper"
 	@echo "... embeddingFunctor"
+	@echo "... linear"
 	@echo "... rmsNormFunctor"
+	@echo "... cublas_utils.o"
+	@echo "... cublas_utils.i"
+	@echo "... cublas_utils.s"
 	@echo "... input_embedding.o"
 	@echo "... input_embedding.i"
 	@echo "... input_embedding.s"
+	@echo "... linear.o"
+	@echo "... linear.i"
+	@echo "... linear.s"
 	@echo "... rms_norm.o"
 	@echo "... rms_norm.i"
 	@echo "... rms_norm.s"

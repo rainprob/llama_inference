@@ -98,6 +98,8 @@ src/clean: src/kernels/clean
 # Recursive "all" directory target.
 src/kernels/all: src/kernels/CMakeFiles/embeddingFunctor.dir/all
 src/kernels/all: src/kernels/CMakeFiles/rmsNormFunctor.dir/all
+src/kernels/all: src/kernels/CMakeFiles/cublasWrapper.dir/all
+src/kernels/all: src/kernels/CMakeFiles/linear.dir/all
 .PHONY : src/kernels/all
 
 # Recursive "preinstall" directory target.
@@ -107,6 +109,8 @@ src/kernels/preinstall:
 # Recursive "clean" directory target.
 src/kernels/clean: src/kernels/CMakeFiles/embeddingFunctor.dir/clean
 src/kernels/clean: src/kernels/CMakeFiles/rmsNormFunctor.dir/clean
+src/kernels/clean: src/kernels/CMakeFiles/cublasWrapper.dir/clean
+src/kernels/clean: src/kernels/CMakeFiles/linear.dir/clean
 .PHONY : src/kernels/clean
 
 #=============================================================================
@@ -130,6 +134,7 @@ tests/clean: tests/unittests/clean
 # Recursive "all" directory target.
 tests/unittests/all: tests/unittests/CMakeFiles/embedding.dir/all
 tests/unittests/all: tests/unittests/CMakeFiles/rmsnorm.dir/all
+tests/unittests/all: tests/unittests/CMakeFiles/testlinear.dir/all
 .PHONY : tests/unittests/all
 
 # Recursive "preinstall" directory target.
@@ -139,6 +144,7 @@ tests/unittests/preinstall:
 # Recursive "clean" directory target.
 tests/unittests/clean: tests/unittests/CMakeFiles/embedding.dir/clean
 tests/unittests/clean: tests/unittests/CMakeFiles/rmsnorm.dir/clean
+tests/unittests/clean: tests/unittests/CMakeFiles/testlinear.dir/clean
 .PHONY : tests/unittests/clean
 
 #=============================================================================
@@ -148,7 +154,7 @@ tests/unittests/clean: tests/unittests/CMakeFiles/rmsnorm.dir/clean
 src/kernels/CMakeFiles/embeddingFunctor.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/embeddingFunctor.dir/build.make src/kernels/CMakeFiles/embeddingFunctor.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/embeddingFunctor.dir/build.make src/kernels/CMakeFiles/embeddingFunctor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=3,4,5 "Built target embeddingFunctor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=6,7,8 "Built target embeddingFunctor"
 .PHONY : src/kernels/CMakeFiles/embeddingFunctor.dir/all
 
 # Build rule for subdir invocation for target.
@@ -174,7 +180,7 @@ src/kernels/CMakeFiles/embeddingFunctor.dir/clean:
 src/kernels/CMakeFiles/rmsNormFunctor.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/rmsNormFunctor.dir/build.make src/kernels/CMakeFiles/rmsNormFunctor.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/rmsNormFunctor.dir/build.make src/kernels/CMakeFiles/rmsNormFunctor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=6,7,8 "Built target rmsNormFunctor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=12,13,14 "Built target rmsNormFunctor"
 .PHONY : src/kernels/CMakeFiles/rmsNormFunctor.dir/all
 
 # Build rule for subdir invocation for target.
@@ -194,13 +200,65 @@ src/kernels/CMakeFiles/rmsNormFunctor.dir/clean:
 .PHONY : src/kernels/CMakeFiles/rmsNormFunctor.dir/clean
 
 #=============================================================================
+# Target rules for target src/kernels/CMakeFiles/cublasWrapper.dir
+
+# All Build rule for target.
+src/kernels/CMakeFiles/cublasWrapper.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/cublasWrapper.dir/build.make src/kernels/CMakeFiles/cublasWrapper.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/cublasWrapper.dir/build.make src/kernels/CMakeFiles/cublasWrapper.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=1,2,3 "Built target cublasWrapper"
+.PHONY : src/kernels/CMakeFiles/cublasWrapper.dir/all
+
+# Build rule for subdir invocation for target.
+src/kernels/CMakeFiles/cublasWrapper.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/autodl-tmp/llama_inference/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/kernels/CMakeFiles/cublasWrapper.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/autodl-tmp/llama_inference/build/CMakeFiles 0
+.PHONY : src/kernels/CMakeFiles/cublasWrapper.dir/rule
+
+# Convenience name for target.
+cublasWrapper: src/kernels/CMakeFiles/cublasWrapper.dir/rule
+.PHONY : cublasWrapper
+
+# clean rule for target.
+src/kernels/CMakeFiles/cublasWrapper.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/cublasWrapper.dir/build.make src/kernels/CMakeFiles/cublasWrapper.dir/clean
+.PHONY : src/kernels/CMakeFiles/cublasWrapper.dir/clean
+
+#=============================================================================
+# Target rules for target src/kernels/CMakeFiles/linear.dir
+
+# All Build rule for target.
+src/kernels/CMakeFiles/linear.dir/all: src/kernels/CMakeFiles/cublasWrapper.dir/all
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/linear.dir/build.make src/kernels/CMakeFiles/linear.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/linear.dir/build.make src/kernels/CMakeFiles/linear.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=9,10,11 "Built target linear"
+.PHONY : src/kernels/CMakeFiles/linear.dir/all
+
+# Build rule for subdir invocation for target.
+src/kernels/CMakeFiles/linear.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/autodl-tmp/llama_inference/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/kernels/CMakeFiles/linear.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/autodl-tmp/llama_inference/build/CMakeFiles 0
+.PHONY : src/kernels/CMakeFiles/linear.dir/rule
+
+# Convenience name for target.
+linear: src/kernels/CMakeFiles/linear.dir/rule
+.PHONY : linear
+
+# clean rule for target.
+src/kernels/CMakeFiles/linear.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/linear.dir/build.make src/kernels/CMakeFiles/linear.dir/clean
+.PHONY : src/kernels/CMakeFiles/linear.dir/clean
+
+#=============================================================================
 # Target rules for target tests/unittests/CMakeFiles/embedding.dir
 
 # All Build rule for target.
 tests/unittests/CMakeFiles/embedding.dir/all: src/kernels/CMakeFiles/embeddingFunctor.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/embedding.dir/build.make tests/unittests/CMakeFiles/embedding.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/embedding.dir/build.make tests/unittests/CMakeFiles/embedding.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=1,2 "Built target embedding"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=4,5 "Built target embedding"
 .PHONY : tests/unittests/CMakeFiles/embedding.dir/all
 
 # Build rule for subdir invocation for target.
@@ -226,7 +284,7 @@ tests/unittests/CMakeFiles/embedding.dir/clean:
 tests/unittests/CMakeFiles/rmsnorm.dir/all: src/kernels/CMakeFiles/rmsNormFunctor.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/rmsnorm.dir/build.make tests/unittests/CMakeFiles/rmsnorm.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/rmsnorm.dir/build.make tests/unittests/CMakeFiles/rmsnorm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=9,10 "Built target rmsnorm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=15,16 "Built target rmsnorm"
 .PHONY : tests/unittests/CMakeFiles/rmsnorm.dir/all
 
 # Build rule for subdir invocation for target.
@@ -244,6 +302,33 @@ rmsnorm: tests/unittests/CMakeFiles/rmsnorm.dir/rule
 tests/unittests/CMakeFiles/rmsnorm.dir/clean:
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/rmsnorm.dir/build.make tests/unittests/CMakeFiles/rmsnorm.dir/clean
 .PHONY : tests/unittests/CMakeFiles/rmsnorm.dir/clean
+
+#=============================================================================
+# Target rules for target tests/unittests/CMakeFiles/testlinear.dir
+
+# All Build rule for target.
+tests/unittests/CMakeFiles/testlinear.dir/all: src/kernels/CMakeFiles/cublasWrapper.dir/all
+tests/unittests/CMakeFiles/testlinear.dir/all: src/kernels/CMakeFiles/linear.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/testlinear.dir/build.make tests/unittests/CMakeFiles/testlinear.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/testlinear.dir/build.make tests/unittests/CMakeFiles/testlinear.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=17,18 "Built target testlinear"
+.PHONY : tests/unittests/CMakeFiles/testlinear.dir/all
+
+# Build rule for subdir invocation for target.
+tests/unittests/CMakeFiles/testlinear.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/autodl-tmp/llama_inference/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/unittests/CMakeFiles/testlinear.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/autodl-tmp/llama_inference/build/CMakeFiles 0
+.PHONY : tests/unittests/CMakeFiles/testlinear.dir/rule
+
+# Convenience name for target.
+testlinear: tests/unittests/CMakeFiles/testlinear.dir/rule
+.PHONY : testlinear
+
+# clean rule for target.
+tests/unittests/CMakeFiles/testlinear.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/testlinear.dir/build.make tests/unittests/CMakeFiles/testlinear.dir/clean
+.PHONY : tests/unittests/CMakeFiles/testlinear.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

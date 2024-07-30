@@ -27,7 +27,7 @@ inline WeightType getWeightType()
 template <typename T>
 struct BaseWeight
 {
-    WeightType WeightType;
+    WeightType type;
     std::vector<int> shape;
     T* data;
     T* bias;

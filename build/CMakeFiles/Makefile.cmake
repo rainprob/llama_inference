@@ -61,6 +61,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "src/kernels/CMakeFiles/embeddingFunctor.dir/DependInfo.cmake"
   "src/kernels/CMakeFiles/rmsNormFunctor.dir/DependInfo.cmake"
+  "src/kernels/CMakeFiles/cublasWrapper.dir/DependInfo.cmake"
+  "src/kernels/CMakeFiles/linear.dir/DependInfo.cmake"
   "tests/unittests/CMakeFiles/embedding.dir/DependInfo.cmake"
   "tests/unittests/CMakeFiles/rmsnorm.dir/DependInfo.cmake"
+  "tests/unittests/CMakeFiles/testlinear.dir/DependInfo.cmake"
   )
