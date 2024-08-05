@@ -3,6 +3,10 @@ set_property(TARGET embeddingFunctor PROPERTY CUDA_SEPARABLE_COMPILATION   ON)
 set_property(TARGET embeddingFunctor PROPERTY POSITION_INDEPENDENT_CODE  ON)
 set_property(TARGET embeddingFunctor PROPERTY CUDA_RESOLVE_DEVICE_SYMBOLS  ON)
 
+add_library(cal_paddingoffset STATIC cal_paddingoffset.cu)
+set_property(TARGET cal_paddingoffset PROPERTY CUDA_SEPARABLE_COMPILATION   ON)
+set_property(TARGET cal_paddingoffset PROPERTY POSITION_INDEPENDENT_CODE  ON)
+set_property(TARGET cal_paddingoffset PROPERTY CUDA_RESOLVE_DEVICE_SYMBOLS  ON)
 
 add_library(rmsNormFunctor STATIC rms_norm.cu)
 set_property(TARGET rmsNormFunctor PROPERTY CUDA_SEPARABLE_COMPILATION   ON)
@@ -18,3 +22,20 @@ set_property(TARGET linear PROPERTY CUDA_SEPARABLE_COMPILATION   ON)
 set_property(TARGET linear PROPERTY POSITION_INDEPENDENT_CODE  ON)
 set_property(TARGET linear PROPERTY CUDA_RESOLVE_DEVICE_SYMBOLS  ON)
 target_link_libraries(linear PUBLIC -lcudart -lcublas cublasWrapper)
+
+add_library(build_casual_mask STATIC build_casual_mask.cu)
+set_property(TARGET build_casual_mask PROPERTY CUDA_SEPARABLE_COMPILATION   ON)
+set_property(TARGET build_casual_mask PROPERTY POSITION_INDEPENDENT_CODE  ON)
+set_property(TARGET build_casual_mask PROPERTY CUDA_RESOLVE_DEVICE_SYMBOLS  ON)
+
+
+add_library(fused_addresidual_norm STATIC fused_addresidual_norm.cu)
+set_property(TARGET fused_addresidual_norm PROPERTY CUDA_SEPARABLE_COMPILATION   ON)
+set_property(TARGET fused_addresidual_norm PROPERTY POSITION_INDEPENDENT_CODE  ON)
+set_property(TARGET fused_addresidual_norm PROPERTY CUDA_RESOLVE_DEVICE_SYMBOLS  ON)
+
+
+add_library(act STATIC act_kernel.cu)
+set_property(TARGET act PROPERTY CUDA_SEPARABLE_COMPILATION   ON)
+set_property(TARGET act PROPERTY POSITION_INDEPENDENT_CODE  ON)
+set_property(TARGET act PROPERTY CUDA_RESOLVE_DEVICE_SYMBOLS  ON)
