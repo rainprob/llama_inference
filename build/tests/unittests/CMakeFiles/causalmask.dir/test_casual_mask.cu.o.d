@@ -275,7 +275,7 @@ tests/unittests/CMakeFiles/causalmask.dir/test_casual_mask.cu.o : /root/autodl-t
     /usr/include/c++/11/bits/stl_vector.h \
     /usr/include/c++/11/bits/stl_bvector.h \
     /usr/include/c++/11/bits/vector.tcc \
-    /root/autodl-tmp/llama_inference/src/kernels/causal_mask.h \
+    /root/autodl-tmp/llama_inference/src/kernels/build_casual_mask.h \
     /usr/local/cuda/include/cuda.h \
     /usr/local/cuda/include/cuda_fp16.h \
     /usr/local/cuda/include/cuda_fp16.hpp \

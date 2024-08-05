@@ -131,6 +131,20 @@ embeddingFunctor/fast:
 .PHONY : embeddingFunctor/fast
 
 # Convenience name for target.
+src/kernels/CMakeFiles/cal_paddingoffset.dir/rule:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/kernels/CMakeFiles/cal_paddingoffset.dir/rule
+.PHONY : src/kernels/CMakeFiles/cal_paddingoffset.dir/rule
+
+# Convenience name for target.
+cal_paddingoffset: src/kernels/CMakeFiles/cal_paddingoffset.dir/rule
+.PHONY : cal_paddingoffset
+
+# fast build rule for target.
+cal_paddingoffset/fast:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/cal_paddingoffset.dir/build.make src/kernels/CMakeFiles/cal_paddingoffset.dir/build
+.PHONY : cal_paddingoffset/fast
+
+# Convenience name for target.
 src/kernels/CMakeFiles/rmsNormFunctor.dir/rule:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/kernels/CMakeFiles/rmsNormFunctor.dir/rule
 .PHONY : src/kernels/CMakeFiles/rmsNormFunctor.dir/rule
@@ -172,6 +186,120 @@ linear/fast:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/linear.dir/build.make src/kernels/CMakeFiles/linear.dir/build
 .PHONY : linear/fast
 
+# Convenience name for target.
+src/kernels/CMakeFiles/build_casual_mask.dir/rule:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/kernels/CMakeFiles/build_casual_mask.dir/rule
+.PHONY : src/kernels/CMakeFiles/build_casual_mask.dir/rule
+
+# Convenience name for target.
+build_casual_mask: src/kernels/CMakeFiles/build_casual_mask.dir/rule
+.PHONY : build_casual_mask
+
+# fast build rule for target.
+build_casual_mask/fast:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/build_casual_mask.dir/build.make src/kernels/CMakeFiles/build_casual_mask.dir/build
+.PHONY : build_casual_mask/fast
+
+# Convenience name for target.
+src/kernels/CMakeFiles/fused_addresidual_norm.dir/rule:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/kernels/CMakeFiles/fused_addresidual_norm.dir/rule
+.PHONY : src/kernels/CMakeFiles/fused_addresidual_norm.dir/rule
+
+# Convenience name for target.
+fused_addresidual_norm: src/kernels/CMakeFiles/fused_addresidual_norm.dir/rule
+.PHONY : fused_addresidual_norm
+
+# fast build rule for target.
+fused_addresidual_norm/fast:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/fused_addresidual_norm.dir/build.make src/kernels/CMakeFiles/fused_addresidual_norm.dir/build
+.PHONY : fused_addresidual_norm/fast
+
+# Convenience name for target.
+src/kernels/CMakeFiles/act.dir/rule:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/kernels/CMakeFiles/act.dir/rule
+.PHONY : src/kernels/CMakeFiles/act.dir/rule
+
+# Convenience name for target.
+act: src/kernels/CMakeFiles/act.dir/rule
+.PHONY : act
+
+# fast build rule for target.
+act/fast:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/act.dir/build.make src/kernels/CMakeFiles/act.dir/build
+.PHONY : act/fast
+
+act_kernel.o: act_kernel.cu.o
+.PHONY : act_kernel.o
+
+# target to build an object file
+act_kernel.cu.o:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/act.dir/build.make src/kernels/CMakeFiles/act.dir/act_kernel.cu.o
+.PHONY : act_kernel.cu.o
+
+act_kernel.i: act_kernel.cu.i
+.PHONY : act_kernel.i
+
+# target to preprocess a source file
+act_kernel.cu.i:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/act.dir/build.make src/kernels/CMakeFiles/act.dir/act_kernel.cu.i
+.PHONY : act_kernel.cu.i
+
+act_kernel.s: act_kernel.cu.s
+.PHONY : act_kernel.s
+
+# target to generate assembly for a file
+act_kernel.cu.s:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/act.dir/build.make src/kernels/CMakeFiles/act.dir/act_kernel.cu.s
+.PHONY : act_kernel.cu.s
+
+build_casual_mask.o: build_casual_mask.cu.o
+.PHONY : build_casual_mask.o
+
+# target to build an object file
+build_casual_mask.cu.o:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/build_casual_mask.dir/build.make src/kernels/CMakeFiles/build_casual_mask.dir/build_casual_mask.cu.o
+.PHONY : build_casual_mask.cu.o
+
+build_casual_mask.i: build_casual_mask.cu.i
+.PHONY : build_casual_mask.i
+
+# target to preprocess a source file
+build_casual_mask.cu.i:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/build_casual_mask.dir/build.make src/kernels/CMakeFiles/build_casual_mask.dir/build_casual_mask.cu.i
+.PHONY : build_casual_mask.cu.i
+
+build_casual_mask.s: build_casual_mask.cu.s
+.PHONY : build_casual_mask.s
+
+# target to generate assembly for a file
+build_casual_mask.cu.s:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/build_casual_mask.dir/build.make src/kernels/CMakeFiles/build_casual_mask.dir/build_casual_mask.cu.s
+.PHONY : build_casual_mask.cu.s
+
+cal_paddingoffset.o: cal_paddingoffset.cu.o
+.PHONY : cal_paddingoffset.o
+
+# target to build an object file
+cal_paddingoffset.cu.o:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/cal_paddingoffset.dir/build.make src/kernels/CMakeFiles/cal_paddingoffset.dir/cal_paddingoffset.cu.o
+.PHONY : cal_paddingoffset.cu.o
+
+cal_paddingoffset.i: cal_paddingoffset.cu.i
+.PHONY : cal_paddingoffset.i
+
+# target to preprocess a source file
+cal_paddingoffset.cu.i:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/cal_paddingoffset.dir/build.make src/kernels/CMakeFiles/cal_paddingoffset.dir/cal_paddingoffset.cu.i
+.PHONY : cal_paddingoffset.cu.i
+
+cal_paddingoffset.s: cal_paddingoffset.cu.s
+.PHONY : cal_paddingoffset.s
+
+# target to generate assembly for a file
+cal_paddingoffset.cu.s:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/cal_paddingoffset.dir/build.make src/kernels/CMakeFiles/cal_paddingoffset.dir/cal_paddingoffset.cu.s
+.PHONY : cal_paddingoffset.cu.s
+
 cublas_utils.o: cublas_utils.cc.o
 .PHONY : cublas_utils.o
 
@@ -195,6 +323,30 @@ cublas_utils.s: cublas_utils.cc.s
 cublas_utils.cc.s:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/cublasWrapper.dir/build.make src/kernels/CMakeFiles/cublasWrapper.dir/cublas_utils.cc.s
 .PHONY : cublas_utils.cc.s
+
+fused_addresidual_norm.o: fused_addresidual_norm.cu.o
+.PHONY : fused_addresidual_norm.o
+
+# target to build an object file
+fused_addresidual_norm.cu.o:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/fused_addresidual_norm.dir/build.make src/kernels/CMakeFiles/fused_addresidual_norm.dir/fused_addresidual_norm.cu.o
+.PHONY : fused_addresidual_norm.cu.o
+
+fused_addresidual_norm.i: fused_addresidual_norm.cu.i
+.PHONY : fused_addresidual_norm.i
+
+# target to preprocess a source file
+fused_addresidual_norm.cu.i:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/fused_addresidual_norm.dir/build.make src/kernels/CMakeFiles/fused_addresidual_norm.dir/fused_addresidual_norm.cu.i
+.PHONY : fused_addresidual_norm.cu.i
+
+fused_addresidual_norm.s: fused_addresidual_norm.cu.s
+.PHONY : fused_addresidual_norm.s
+
+# target to generate assembly for a file
+fused_addresidual_norm.cu.s:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/fused_addresidual_norm.dir/build.make src/kernels/CMakeFiles/fused_addresidual_norm.dir/fused_addresidual_norm.cu.s
+.PHONY : fused_addresidual_norm.cu.s
 
 input_embedding.o: input_embedding.cu.o
 .PHONY : input_embedding.o
@@ -276,13 +428,29 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... act"
+	@echo "... build_casual_mask"
+	@echo "... cal_paddingoffset"
 	@echo "... cublasWrapper"
 	@echo "... embeddingFunctor"
+	@echo "... fused_addresidual_norm"
 	@echo "... linear"
 	@echo "... rmsNormFunctor"
+	@echo "... act_kernel.o"
+	@echo "... act_kernel.i"
+	@echo "... act_kernel.s"
+	@echo "... build_casual_mask.o"
+	@echo "... build_casual_mask.i"
+	@echo "... build_casual_mask.s"
+	@echo "... cal_paddingoffset.o"
+	@echo "... cal_paddingoffset.i"
+	@echo "... cal_paddingoffset.s"
 	@echo "... cublas_utils.o"
 	@echo "... cublas_utils.i"
 	@echo "... cublas_utils.s"
+	@echo "... fused_addresidual_norm.o"
+	@echo "... fused_addresidual_norm.i"
+	@echo "... fused_addresidual_norm.s"
 	@echo "... input_embedding.o"
 	@echo "... input_embedding.i"
 	@echo "... input_embedding.s"

@@ -278,7 +278,7 @@ tests/unittests/CMakeFiles/causalmask.dir/test_casual_mask.cu.o: ../tests/unitte
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
-  ../src/kernels/causal_mask.h \
+  ../src/kernels/build_casual_mask.h \
   /usr/local/cuda/include/cuda.h \
   /usr/local/cuda/include/cuda_fp16.h \
   /usr/local/cuda/include/cuda_fp16.hpp \
@@ -365,7 +365,7 @@ tests/unittests/CMakeFiles/causalmask.dir/test_casual_mask.cu.o: ../tests/unitte
 
 ../src/utils/tensor.h:
 
-../src/kernels/causal_mask.h:
+../src/kernels/build_casual_mask.h:
 
 /usr/include/c++/11/bits/vector.tcc:
 

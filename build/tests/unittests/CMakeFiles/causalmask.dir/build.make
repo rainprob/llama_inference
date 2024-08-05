@@ -92,7 +92,7 @@ causalmask_EXTERNAL_OBJECTS =
 
 bin/causalmask: tests/unittests/CMakeFiles/causalmask.dir/test_casual_mask.cu.o
 bin/causalmask: tests/unittests/CMakeFiles/causalmask.dir/build.make
-bin/causalmask: lib/libcausalMaskFunctor.a
+bin/causalmask: lib/libbuild_casual_mask.a
 bin/causalmask: tests/unittests/CMakeFiles/causalmask.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CUDA executable ../../bin/causalmask"
 	cd /root/autodl-tmp/llama_inference/build/tests/unittests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/causalmask.dir/link.txt --verbose=$(VERBOSE)

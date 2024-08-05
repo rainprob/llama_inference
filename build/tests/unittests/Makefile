@@ -145,6 +145,34 @@ rmsnorm/fast:
 .PHONY : rmsnorm/fast
 
 # Convenience name for target.
+tests/unittests/CMakeFiles/paddingoffset.dir/rule:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/unittests/CMakeFiles/paddingoffset.dir/rule
+.PHONY : tests/unittests/CMakeFiles/paddingoffset.dir/rule
+
+# Convenience name for target.
+paddingoffset: tests/unittests/CMakeFiles/paddingoffset.dir/rule
+.PHONY : paddingoffset
+
+# fast build rule for target.
+paddingoffset/fast:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/paddingoffset.dir/build.make tests/unittests/CMakeFiles/paddingoffset.dir/build
+.PHONY : paddingoffset/fast
+
+# Convenience name for target.
+tests/unittests/CMakeFiles/causalmask.dir/rule:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/unittests/CMakeFiles/causalmask.dir/rule
+.PHONY : tests/unittests/CMakeFiles/causalmask.dir/rule
+
+# Convenience name for target.
+causalmask: tests/unittests/CMakeFiles/causalmask.dir/rule
+.PHONY : causalmask
+
+# fast build rule for target.
+causalmask/fast:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/causalmask.dir/build.make tests/unittests/CMakeFiles/causalmask.dir/build
+.PHONY : causalmask/fast
+
+# Convenience name for target.
 tests/unittests/CMakeFiles/testlinear.dir/rule:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/unittests/CMakeFiles/testlinear.dir/rule
 .PHONY : tests/unittests/CMakeFiles/testlinear.dir/rule
@@ -157,6 +185,130 @@ testlinear: tests/unittests/CMakeFiles/testlinear.dir/rule
 testlinear/fast:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/testlinear.dir/build.make tests/unittests/CMakeFiles/testlinear.dir/build
 .PHONY : testlinear/fast
+
+# Convenience name for target.
+tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/rule:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/rule
+.PHONY : tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/rule
+
+# Convenience name for target.
+test_fused_addresidual_norm: tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/rule
+.PHONY : test_fused_addresidual_norm
+
+# fast build rule for target.
+test_fused_addresidual_norm/fast:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/build.make tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/build
+.PHONY : test_fused_addresidual_norm/fast
+
+# Convenience name for target.
+tests/unittests/CMakeFiles/test_act.dir/rule:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/unittests/CMakeFiles/test_act.dir/rule
+.PHONY : tests/unittests/CMakeFiles/test_act.dir/rule
+
+# Convenience name for target.
+test_act: tests/unittests/CMakeFiles/test_act.dir/rule
+.PHONY : test_act
+
+# fast build rule for target.
+test_act/fast:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_act.dir/build.make tests/unittests/CMakeFiles/test_act.dir/build
+.PHONY : test_act/fast
+
+test_act.o: test_act.cu.o
+.PHONY : test_act.o
+
+# target to build an object file
+test_act.cu.o:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_act.dir/build.make tests/unittests/CMakeFiles/test_act.dir/test_act.cu.o
+.PHONY : test_act.cu.o
+
+test_act.i: test_act.cu.i
+.PHONY : test_act.i
+
+# target to preprocess a source file
+test_act.cu.i:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_act.dir/build.make tests/unittests/CMakeFiles/test_act.dir/test_act.cu.i
+.PHONY : test_act.cu.i
+
+test_act.s: test_act.cu.s
+.PHONY : test_act.s
+
+# target to generate assembly for a file
+test_act.cu.s:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_act.dir/build.make tests/unittests/CMakeFiles/test_act.dir/test_act.cu.s
+.PHONY : test_act.cu.s
+
+test_cal_paddingoffset.o: test_cal_paddingoffset.cu.o
+.PHONY : test_cal_paddingoffset.o
+
+# target to build an object file
+test_cal_paddingoffset.cu.o:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/paddingoffset.dir/build.make tests/unittests/CMakeFiles/paddingoffset.dir/test_cal_paddingoffset.cu.o
+.PHONY : test_cal_paddingoffset.cu.o
+
+test_cal_paddingoffset.i: test_cal_paddingoffset.cu.i
+.PHONY : test_cal_paddingoffset.i
+
+# target to preprocess a source file
+test_cal_paddingoffset.cu.i:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/paddingoffset.dir/build.make tests/unittests/CMakeFiles/paddingoffset.dir/test_cal_paddingoffset.cu.i
+.PHONY : test_cal_paddingoffset.cu.i
+
+test_cal_paddingoffset.s: test_cal_paddingoffset.cu.s
+.PHONY : test_cal_paddingoffset.s
+
+# target to generate assembly for a file
+test_cal_paddingoffset.cu.s:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/paddingoffset.dir/build.make tests/unittests/CMakeFiles/paddingoffset.dir/test_cal_paddingoffset.cu.s
+.PHONY : test_cal_paddingoffset.cu.s
+
+test_casual_mask.o: test_casual_mask.cu.o
+.PHONY : test_casual_mask.o
+
+# target to build an object file
+test_casual_mask.cu.o:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/causalmask.dir/build.make tests/unittests/CMakeFiles/causalmask.dir/test_casual_mask.cu.o
+.PHONY : test_casual_mask.cu.o
+
+test_casual_mask.i: test_casual_mask.cu.i
+.PHONY : test_casual_mask.i
+
+# target to preprocess a source file
+test_casual_mask.cu.i:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/causalmask.dir/build.make tests/unittests/CMakeFiles/causalmask.dir/test_casual_mask.cu.i
+.PHONY : test_casual_mask.cu.i
+
+test_casual_mask.s: test_casual_mask.cu.s
+.PHONY : test_casual_mask.s
+
+# target to generate assembly for a file
+test_casual_mask.cu.s:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/causalmask.dir/build.make tests/unittests/CMakeFiles/causalmask.dir/test_casual_mask.cu.s
+.PHONY : test_casual_mask.cu.s
+
+test_fused_addresidual_norm.o: test_fused_addresidual_norm.cu.o
+.PHONY : test_fused_addresidual_norm.o
+
+# target to build an object file
+test_fused_addresidual_norm.cu.o:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/build.make tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/test_fused_addresidual_norm.cu.o
+.PHONY : test_fused_addresidual_norm.cu.o
+
+test_fused_addresidual_norm.i: test_fused_addresidual_norm.cu.i
+.PHONY : test_fused_addresidual_norm.i
+
+# target to preprocess a source file
+test_fused_addresidual_norm.cu.i:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/build.make tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/test_fused_addresidual_norm.cu.i
+.PHONY : test_fused_addresidual_norm.cu.i
+
+test_fused_addresidual_norm.s: test_fused_addresidual_norm.cu.s
+.PHONY : test_fused_addresidual_norm.s
+
+# target to generate assembly for a file
+test_fused_addresidual_norm.cu.s:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/build.make tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/test_fused_addresidual_norm.cu.s
+.PHONY : test_fused_addresidual_norm.cu.s
 
 test_input_embedding.o: test_input_embedding.cu.o
 .PHONY : test_input_embedding.o
@@ -238,9 +390,25 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... causalmask"
 	@echo "... embedding"
+	@echo "... paddingoffset"
 	@echo "... rmsnorm"
+	@echo "... test_act"
+	@echo "... test_fused_addresidual_norm"
 	@echo "... testlinear"
+	@echo "... test_act.o"
+	@echo "... test_act.i"
+	@echo "... test_act.s"
+	@echo "... test_cal_paddingoffset.o"
+	@echo "... test_cal_paddingoffset.i"
+	@echo "... test_cal_paddingoffset.s"
+	@echo "... test_casual_mask.o"
+	@echo "... test_casual_mask.i"
+	@echo "... test_casual_mask.s"
+	@echo "... test_fused_addresidual_norm.o"
+	@echo "... test_fused_addresidual_norm.i"
+	@echo "... test_fused_addresidual_norm.s"
 	@echo "... test_input_embedding.o"
 	@echo "... test_input_embedding.i"
 	@echo "... test_input_embedding.s"

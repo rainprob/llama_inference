@@ -130,6 +130,19 @@ embeddingFunctor/fast:
 .PHONY : embeddingFunctor/fast
 
 #=============================================================================
+# Target rules for targets named cal_paddingoffset
+
+# Build rule for target.
+cal_paddingoffset: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cal_paddingoffset
+.PHONY : cal_paddingoffset
+
+# fast build rule for target.
+cal_paddingoffset/fast:
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/cal_paddingoffset.dir/build.make src/kernels/CMakeFiles/cal_paddingoffset.dir/build
+.PHONY : cal_paddingoffset/fast
+
+#=============================================================================
 # Target rules for targets named rmsNormFunctor
 
 # Build rule for target.
@@ -169,6 +182,45 @@ linear/fast:
 .PHONY : linear/fast
 
 #=============================================================================
+# Target rules for targets named build_casual_mask
+
+# Build rule for target.
+build_casual_mask: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 build_casual_mask
+.PHONY : build_casual_mask
+
+# fast build rule for target.
+build_casual_mask/fast:
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/build_casual_mask.dir/build.make src/kernels/CMakeFiles/build_casual_mask.dir/build
+.PHONY : build_casual_mask/fast
+
+#=============================================================================
+# Target rules for targets named fused_addresidual_norm
+
+# Build rule for target.
+fused_addresidual_norm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fused_addresidual_norm
+.PHONY : fused_addresidual_norm
+
+# fast build rule for target.
+fused_addresidual_norm/fast:
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/fused_addresidual_norm.dir/build.make src/kernels/CMakeFiles/fused_addresidual_norm.dir/build
+.PHONY : fused_addresidual_norm/fast
+
+#=============================================================================
+# Target rules for targets named act
+
+# Build rule for target.
+act: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 act
+.PHONY : act
+
+# fast build rule for target.
+act/fast:
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/act.dir/build.make src/kernels/CMakeFiles/act.dir/build
+.PHONY : act/fast
+
+#=============================================================================
 # Target rules for targets named embedding
 
 # Build rule for target.
@@ -195,6 +247,32 @@ rmsnorm/fast:
 .PHONY : rmsnorm/fast
 
 #=============================================================================
+# Target rules for targets named paddingoffset
+
+# Build rule for target.
+paddingoffset: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 paddingoffset
+.PHONY : paddingoffset
+
+# fast build rule for target.
+paddingoffset/fast:
+	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/paddingoffset.dir/build.make tests/unittests/CMakeFiles/paddingoffset.dir/build
+.PHONY : paddingoffset/fast
+
+#=============================================================================
+# Target rules for targets named causalmask
+
+# Build rule for target.
+causalmask: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 causalmask
+.PHONY : causalmask
+
+# fast build rule for target.
+causalmask/fast:
+	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/causalmask.dir/build.make tests/unittests/CMakeFiles/causalmask.dir/build
+.PHONY : causalmask/fast
+
+#=============================================================================
 # Target rules for targets named testlinear
 
 # Build rule for target.
@@ -207,6 +285,32 @@ testlinear/fast:
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/testlinear.dir/build.make tests/unittests/CMakeFiles/testlinear.dir/build
 .PHONY : testlinear/fast
 
+#=============================================================================
+# Target rules for targets named test_fused_addresidual_norm
+
+# Build rule for target.
+test_fused_addresidual_norm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_fused_addresidual_norm
+.PHONY : test_fused_addresidual_norm
+
+# fast build rule for target.
+test_fused_addresidual_norm/fast:
+	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/build.make tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/build
+.PHONY : test_fused_addresidual_norm/fast
+
+#=============================================================================
+# Target rules for targets named test_act
+
+# Build rule for target.
+test_act: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_act
+.PHONY : test_act
+
+# fast build rule for target.
+test_act/fast:
+	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_act.dir/build.make tests/unittests/CMakeFiles/test_act.dir/build
+.PHONY : test_act/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -215,12 +319,20 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... act"
+	@echo "... build_casual_mask"
+	@echo "... cal_paddingoffset"
+	@echo "... causalmask"
 	@echo "... cublasWrapper"
 	@echo "... embedding"
 	@echo "... embeddingFunctor"
+	@echo "... fused_addresidual_norm"
 	@echo "... linear"
+	@echo "... paddingoffset"
 	@echo "... rmsNormFunctor"
 	@echo "... rmsnorm"
+	@echo "... test_act"
+	@echo "... test_fused_addresidual_norm"
 	@echo "... testlinear"
 .PHONY : help
 
