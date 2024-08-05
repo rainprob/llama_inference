@@ -187,6 +187,20 @@ testlinear/fast:
 .PHONY : testlinear/fast
 
 # Convenience name for target.
+tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/rule:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/rule
+.PHONY : tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/rule
+
+# Convenience name for target.
+test_fused_trans_remv_pad: tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/rule
+.PHONY : test_fused_trans_remv_pad
+
+# fast build rule for target.
+test_fused_trans_remv_pad/fast:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/build.make tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/build
+.PHONY : test_fused_trans_remv_pad/fast
+
+# Convenience name for target.
 tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/rule:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/rule
 .PHONY : tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/rule
@@ -310,6 +324,30 @@ test_fused_addresidual_norm.cu.s:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/build.make tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/test_fused_addresidual_norm.cu.s
 .PHONY : test_fused_addresidual_norm.cu.s
 
+test_fused_trans_remv_pad.o: test_fused_trans_remv_pad.cu.o
+.PHONY : test_fused_trans_remv_pad.o
+
+# target to build an object file
+test_fused_trans_remv_pad.cu.o:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/build.make tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/test_fused_trans_remv_pad.cu.o
+.PHONY : test_fused_trans_remv_pad.cu.o
+
+test_fused_trans_remv_pad.i: test_fused_trans_remv_pad.cu.i
+.PHONY : test_fused_trans_remv_pad.i
+
+# target to preprocess a source file
+test_fused_trans_remv_pad.cu.i:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/build.make tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/test_fused_trans_remv_pad.cu.i
+.PHONY : test_fused_trans_remv_pad.cu.i
+
+test_fused_trans_remv_pad.s: test_fused_trans_remv_pad.cu.s
+.PHONY : test_fused_trans_remv_pad.s
+
+# target to generate assembly for a file
+test_fused_trans_remv_pad.cu.s:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/build.make tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/test_fused_trans_remv_pad.cu.s
+.PHONY : test_fused_trans_remv_pad.cu.s
+
 test_input_embedding.o: test_input_embedding.cu.o
 .PHONY : test_input_embedding.o
 
@@ -396,6 +434,7 @@ help:
 	@echo "... rmsnorm"
 	@echo "... test_act"
 	@echo "... test_fused_addresidual_norm"
+	@echo "... test_fused_trans_remv_pad"
 	@echo "... testlinear"
 	@echo "... test_act.o"
 	@echo "... test_act.i"
@@ -409,6 +448,9 @@ help:
 	@echo "... test_fused_addresidual_norm.o"
 	@echo "... test_fused_addresidual_norm.i"
 	@echo "... test_fused_addresidual_norm.s"
+	@echo "... test_fused_trans_remv_pad.o"
+	@echo "... test_fused_trans_remv_pad.i"
+	@echo "... test_fused_trans_remv_pad.s"
 	@echo "... test_input_embedding.o"
 	@echo "... test_input_embedding.i"
 	@echo "... test_input_embedding.s"

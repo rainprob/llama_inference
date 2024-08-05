@@ -8,6 +8,7 @@
 /root/autodl-tmp/llama_inference/build/src/kernels/CMakeFiles/cublasWrapper.dir
 /root/autodl-tmp/llama_inference/build/src/kernels/CMakeFiles/linear.dir
 /root/autodl-tmp/llama_inference/build/src/kernels/CMakeFiles/build_casual_mask.dir
+/root/autodl-tmp/llama_inference/build/src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir
 /root/autodl-tmp/llama_inference/build/src/kernels/CMakeFiles/fused_addresidual_norm.dir
 /root/autodl-tmp/llama_inference/build/src/kernels/CMakeFiles/act.dir
 /root/autodl-tmp/llama_inference/build/src/kernels/CMakeFiles/edit_cache.dir
@@ -19,6 +20,7 @@
 /root/autodl-tmp/llama_inference/build/tests/unittests/CMakeFiles/paddingoffset.dir
 /root/autodl-tmp/llama_inference/build/tests/unittests/CMakeFiles/causalmask.dir
 /root/autodl-tmp/llama_inference/build/tests/unittests/CMakeFiles/testlinear.dir
+/root/autodl-tmp/llama_inference/build/tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir
 /root/autodl-tmp/llama_inference/build/tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir
 /root/autodl-tmp/llama_inference/build/tests/unittests/CMakeFiles/test_act.dir
 /root/autodl-tmp/llama_inference/build/tests/unittests/CMakeFiles/edit_cache.dir

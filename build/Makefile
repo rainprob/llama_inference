@@ -195,6 +195,19 @@ build_casual_mask/fast:
 .PHONY : build_casual_mask/fast
 
 #=============================================================================
+# Target rules for targets named fused_transpose_and_remv_pad
+
+# Build rule for target.
+fused_transpose_and_remv_pad: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fused_transpose_and_remv_pad
+.PHONY : fused_transpose_and_remv_pad
+
+# fast build rule for target.
+fused_transpose_and_remv_pad/fast:
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/build.make src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/build
+.PHONY : fused_transpose_and_remv_pad/fast
+
+#=============================================================================
 # Target rules for targets named fused_addresidual_norm
 
 # Build rule for target.
@@ -286,6 +299,19 @@ testlinear/fast:
 .PHONY : testlinear/fast
 
 #=============================================================================
+# Target rules for targets named test_fused_trans_remv_pad
+
+# Build rule for target.
+test_fused_trans_remv_pad: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_fused_trans_remv_pad
+.PHONY : test_fused_trans_remv_pad
+
+# fast build rule for target.
+test_fused_trans_remv_pad/fast:
+	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/build.make tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/build
+.PHONY : test_fused_trans_remv_pad/fast
+
+#=============================================================================
 # Target rules for targets named test_fused_addresidual_norm
 
 # Build rule for target.
@@ -327,12 +353,14 @@ help:
 	@echo "... embedding"
 	@echo "... embeddingFunctor"
 	@echo "... fused_addresidual_norm"
+	@echo "... fused_transpose_and_remv_pad"
 	@echo "... linear"
 	@echo "... paddingoffset"
 	@echo "... rmsNormFunctor"
 	@echo "... rmsnorm"
 	@echo "... test_act"
 	@echo "... test_fused_addresidual_norm"
+	@echo "... test_fused_trans_remv_pad"
 	@echo "... testlinear"
 .PHONY : help
 

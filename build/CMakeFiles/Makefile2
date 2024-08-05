@@ -102,6 +102,7 @@ src/kernels/all: src/kernels/CMakeFiles/rmsNormFunctor.dir/all
 src/kernels/all: src/kernels/CMakeFiles/cublasWrapper.dir/all
 src/kernels/all: src/kernels/CMakeFiles/linear.dir/all
 src/kernels/all: src/kernels/CMakeFiles/build_casual_mask.dir/all
+src/kernels/all: src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/all
 src/kernels/all: src/kernels/CMakeFiles/fused_addresidual_norm.dir/all
 src/kernels/all: src/kernels/CMakeFiles/act.dir/all
 .PHONY : src/kernels/all
@@ -117,6 +118,7 @@ src/kernels/clean: src/kernels/CMakeFiles/rmsNormFunctor.dir/clean
 src/kernels/clean: src/kernels/CMakeFiles/cublasWrapper.dir/clean
 src/kernels/clean: src/kernels/CMakeFiles/linear.dir/clean
 src/kernels/clean: src/kernels/CMakeFiles/build_casual_mask.dir/clean
+src/kernels/clean: src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/clean
 src/kernels/clean: src/kernels/CMakeFiles/fused_addresidual_norm.dir/clean
 src/kernels/clean: src/kernels/CMakeFiles/act.dir/clean
 .PHONY : src/kernels/clean
@@ -145,6 +147,7 @@ tests/unittests/all: tests/unittests/CMakeFiles/rmsnorm.dir/all
 tests/unittests/all: tests/unittests/CMakeFiles/paddingoffset.dir/all
 tests/unittests/all: tests/unittests/CMakeFiles/causalmask.dir/all
 tests/unittests/all: tests/unittests/CMakeFiles/testlinear.dir/all
+tests/unittests/all: tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/all
 tests/unittests/all: tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/all
 tests/unittests/all: tests/unittests/CMakeFiles/test_act.dir/all
 .PHONY : tests/unittests/all
@@ -159,6 +162,7 @@ tests/unittests/clean: tests/unittests/CMakeFiles/rmsnorm.dir/clean
 tests/unittests/clean: tests/unittests/CMakeFiles/paddingoffset.dir/clean
 tests/unittests/clean: tests/unittests/CMakeFiles/causalmask.dir/clean
 tests/unittests/clean: tests/unittests/CMakeFiles/testlinear.dir/clean
+tests/unittests/clean: tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/clean
 tests/unittests/clean: tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/clean
 tests/unittests/clean: tests/unittests/CMakeFiles/test_act.dir/clean
 .PHONY : tests/unittests/clean
@@ -222,7 +226,7 @@ src/kernels/CMakeFiles/cal_paddingoffset.dir/clean:
 src/kernels/CMakeFiles/rmsNormFunctor.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/rmsNormFunctor.dir/build.make src/kernels/CMakeFiles/rmsNormFunctor.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/rmsNormFunctor.dir/build.make src/kernels/CMakeFiles/rmsNormFunctor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=28,29,30 "Built target rmsNormFunctor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=31,32,33 "Built target rmsNormFunctor"
 .PHONY : src/kernels/CMakeFiles/rmsNormFunctor.dir/all
 
 # Build rule for subdir invocation for target.
@@ -274,7 +278,7 @@ src/kernels/CMakeFiles/cublasWrapper.dir/clean:
 src/kernels/CMakeFiles/linear.dir/all: src/kernels/CMakeFiles/cublasWrapper.dir/all
 	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/linear.dir/build.make src/kernels/CMakeFiles/linear.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/linear.dir/build.make src/kernels/CMakeFiles/linear.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=23,24,25 "Built target linear"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=26,27,28 "Built target linear"
 .PHONY : src/kernels/CMakeFiles/linear.dir/all
 
 # Build rule for subdir invocation for target.
@@ -318,6 +322,32 @@ build_casual_mask: src/kernels/CMakeFiles/build_casual_mask.dir/rule
 src/kernels/CMakeFiles/build_casual_mask.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/build_casual_mask.dir/build.make src/kernels/CMakeFiles/build_casual_mask.dir/clean
 .PHONY : src/kernels/CMakeFiles/build_casual_mask.dir/clean
+
+#=============================================================================
+# Target rules for target src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir
+
+# All Build rule for target.
+src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/build.make src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/build.make src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=23,24,25 "Built target fused_transpose_and_remv_pad"
+.PHONY : src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/all
+
+# Build rule for subdir invocation for target.
+src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/autodl-tmp/llama_inference/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/autodl-tmp/llama_inference/build/CMakeFiles 0
+.PHONY : src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/rule
+
+# Convenience name for target.
+fused_transpose_and_remv_pad: src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/rule
+.PHONY : fused_transpose_and_remv_pad
+
+# clean rule for target.
+src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/build.make src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/clean
+.PHONY : src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/clean
 
 #=============================================================================
 # Target rules for target src/kernels/CMakeFiles/fused_addresidual_norm.dir
@@ -404,7 +434,7 @@ tests/unittests/CMakeFiles/embedding.dir/clean:
 tests/unittests/CMakeFiles/rmsnorm.dir/all: src/kernels/CMakeFiles/rmsNormFunctor.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/rmsnorm.dir/build.make tests/unittests/CMakeFiles/rmsnorm.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/rmsnorm.dir/build.make tests/unittests/CMakeFiles/rmsnorm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=31,32 "Built target rmsnorm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=34,35 "Built target rmsnorm"
 .PHONY : tests/unittests/CMakeFiles/rmsnorm.dir/all
 
 # Build rule for subdir invocation for target.
@@ -430,7 +460,7 @@ tests/unittests/CMakeFiles/rmsnorm.dir/clean:
 tests/unittests/CMakeFiles/paddingoffset.dir/all: src/kernels/CMakeFiles/cal_paddingoffset.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/paddingoffset.dir/build.make tests/unittests/CMakeFiles/paddingoffset.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/paddingoffset.dir/build.make tests/unittests/CMakeFiles/paddingoffset.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=26,27 "Built target paddingoffset"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=29,30 "Built target paddingoffset"
 .PHONY : tests/unittests/CMakeFiles/paddingoffset.dir/all
 
 # Build rule for subdir invocation for target.
@@ -483,7 +513,7 @@ tests/unittests/CMakeFiles/testlinear.dir/all: src/kernels/CMakeFiles/cublasWrap
 tests/unittests/CMakeFiles/testlinear.dir/all: src/kernels/CMakeFiles/linear.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/testlinear.dir/build.make tests/unittests/CMakeFiles/testlinear.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/testlinear.dir/build.make tests/unittests/CMakeFiles/testlinear.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=37,38 "Built target testlinear"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=42,43 "Built target testlinear"
 .PHONY : tests/unittests/CMakeFiles/testlinear.dir/all
 
 # Build rule for subdir invocation for target.
@@ -503,13 +533,39 @@ tests/unittests/CMakeFiles/testlinear.dir/clean:
 .PHONY : tests/unittests/CMakeFiles/testlinear.dir/clean
 
 #=============================================================================
+# Target rules for target tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir
+
+# All Build rule for target.
+tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/all: src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/build.make tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/build.make tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=40,41 "Built target test_fused_trans_remv_pad"
+.PHONY : tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/all
+
+# Build rule for subdir invocation for target.
+tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/autodl-tmp/llama_inference/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/autodl-tmp/llama_inference/build/CMakeFiles 0
+.PHONY : tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/rule
+
+# Convenience name for target.
+test_fused_trans_remv_pad: tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/rule
+.PHONY : test_fused_trans_remv_pad
+
+# clean rule for target.
+tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/build.make tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/clean
+.PHONY : tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/clean
+
+#=============================================================================
 # Target rules for target tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir
 
 # All Build rule for target.
 tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/all: src/kernels/CMakeFiles/fused_addresidual_norm.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/build.make tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/build.make tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=35,36 "Built target test_fused_addresidual_norm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=38,39 "Built target test_fused_addresidual_norm"
 .PHONY : tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/all
 
 # Build rule for subdir invocation for target.
@@ -535,7 +591,7 @@ tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/clean:
 tests/unittests/CMakeFiles/test_act.dir/all: src/kernels/CMakeFiles/act.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_act.dir/build.make tests/unittests/CMakeFiles/test_act.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_act.dir/build.make tests/unittests/CMakeFiles/test_act.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=33,34 "Built target test_act"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=36,37 "Built target test_act"
 .PHONY : tests/unittests/CMakeFiles/test_act.dir/all
 
 # Build rule for subdir invocation for target.

@@ -65,6 +65,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/kernels/CMakeFiles/cublasWrapper.dir/DependInfo.cmake"
   "src/kernels/CMakeFiles/linear.dir/DependInfo.cmake"
   "src/kernels/CMakeFiles/build_casual_mask.dir/DependInfo.cmake"
+  "src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/DependInfo.cmake"
   "src/kernels/CMakeFiles/fused_addresidual_norm.dir/DependInfo.cmake"
   "src/kernels/CMakeFiles/act.dir/DependInfo.cmake"
   "tests/unittests/CMakeFiles/embedding.dir/DependInfo.cmake"
@@ -72,6 +73,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "tests/unittests/CMakeFiles/paddingoffset.dir/DependInfo.cmake"
   "tests/unittests/CMakeFiles/causalmask.dir/DependInfo.cmake"
   "tests/unittests/CMakeFiles/testlinear.dir/DependInfo.cmake"
+  "tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/DependInfo.cmake"
   "tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/DependInfo.cmake"
   "tests/unittests/CMakeFiles/test_act.dir/DependInfo.cmake"
   )

@@ -201,6 +201,20 @@ build_casual_mask/fast:
 .PHONY : build_casual_mask/fast
 
 # Convenience name for target.
+src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/rule:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/rule
+.PHONY : src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/rule
+
+# Convenience name for target.
+fused_transpose_and_remv_pad: src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/rule
+.PHONY : fused_transpose_and_remv_pad
+
+# fast build rule for target.
+fused_transpose_and_remv_pad/fast:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/build.make src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/build
+.PHONY : fused_transpose_and_remv_pad/fast
+
+# Convenience name for target.
 src/kernels/CMakeFiles/fused_addresidual_norm.dir/rule:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/kernels/CMakeFiles/fused_addresidual_norm.dir/rule
 .PHONY : src/kernels/CMakeFiles/fused_addresidual_norm.dir/rule
@@ -348,6 +362,30 @@ fused_addresidual_norm.cu.s:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/fused_addresidual_norm.dir/build.make src/kernels/CMakeFiles/fused_addresidual_norm.dir/fused_addresidual_norm.cu.s
 .PHONY : fused_addresidual_norm.cu.s
 
+fused_transpose_and_remv_pad.o: fused_transpose_and_remv_pad.cu.o
+.PHONY : fused_transpose_and_remv_pad.o
+
+# target to build an object file
+fused_transpose_and_remv_pad.cu.o:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/build.make src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/fused_transpose_and_remv_pad.cu.o
+.PHONY : fused_transpose_and_remv_pad.cu.o
+
+fused_transpose_and_remv_pad.i: fused_transpose_and_remv_pad.cu.i
+.PHONY : fused_transpose_and_remv_pad.i
+
+# target to preprocess a source file
+fused_transpose_and_remv_pad.cu.i:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/build.make src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/fused_transpose_and_remv_pad.cu.i
+.PHONY : fused_transpose_and_remv_pad.cu.i
+
+fused_transpose_and_remv_pad.s: fused_transpose_and_remv_pad.cu.s
+.PHONY : fused_transpose_and_remv_pad.s
+
+# target to generate assembly for a file
+fused_transpose_and_remv_pad.cu.s:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/build.make src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/fused_transpose_and_remv_pad.cu.s
+.PHONY : fused_transpose_and_remv_pad.cu.s
+
 input_embedding.o: input_embedding.cu.o
 .PHONY : input_embedding.o
 
@@ -434,6 +472,7 @@ help:
 	@echo "... cublasWrapper"
 	@echo "... embeddingFunctor"
 	@echo "... fused_addresidual_norm"
+	@echo "... fused_transpose_and_remv_pad"
 	@echo "... linear"
 	@echo "... rmsNormFunctor"
 	@echo "... act_kernel.o"
@@ -451,6 +490,9 @@ help:
 	@echo "... fused_addresidual_norm.o"
 	@echo "... fused_addresidual_norm.i"
 	@echo "... fused_addresidual_norm.s"
+	@echo "... fused_transpose_and_remv_pad.o"
+	@echo "... fused_transpose_and_remv_pad.i"
+	@echo "... fused_transpose_and_remv_pad.s"
 	@echo "... input_embedding.o"
 	@echo "... input_embedding.i"
 	@echo "... input_embedding.s"
