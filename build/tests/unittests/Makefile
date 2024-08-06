@@ -187,6 +187,34 @@ testlinear/fast:
 .PHONY : testlinear/fast
 
 # Convenience name for target.
+tests/unittests/CMakeFiles/test_concat_kv.dir/rule:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/unittests/CMakeFiles/test_concat_kv.dir/rule
+.PHONY : tests/unittests/CMakeFiles/test_concat_kv.dir/rule
+
+# Convenience name for target.
+test_concat_kv: tests/unittests/CMakeFiles/test_concat_kv.dir/rule
+.PHONY : test_concat_kv
+
+# fast build rule for target.
+test_concat_kv/fast:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_concat_kv.dir/build.make tests/unittests/CMakeFiles/test_concat_kv.dir/build
+.PHONY : test_concat_kv/fast
+
+# Convenience name for target.
+tests/unittests/CMakeFiles/test_repeat_kv.dir/rule:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/unittests/CMakeFiles/test_repeat_kv.dir/rule
+.PHONY : tests/unittests/CMakeFiles/test_repeat_kv.dir/rule
+
+# Convenience name for target.
+test_repeat_kv: tests/unittests/CMakeFiles/test_repeat_kv.dir/rule
+.PHONY : test_repeat_kv
+
+# fast build rule for target.
+test_repeat_kv/fast:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_repeat_kv.dir/build.make tests/unittests/CMakeFiles/test_repeat_kv.dir/build
+.PHONY : test_repeat_kv/fast
+
+# Convenience name for target.
 tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/rule:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/rule
 .PHONY : tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/rule
@@ -300,6 +328,30 @@ test_casual_mask.cu.s:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/causalmask.dir/build.make tests/unittests/CMakeFiles/causalmask.dir/test_casual_mask.cu.s
 .PHONY : test_casual_mask.cu.s
 
+test_concat_kv.o: test_concat_kv.cu.o
+.PHONY : test_concat_kv.o
+
+# target to build an object file
+test_concat_kv.cu.o:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_concat_kv.dir/build.make tests/unittests/CMakeFiles/test_concat_kv.dir/test_concat_kv.cu.o
+.PHONY : test_concat_kv.cu.o
+
+test_concat_kv.i: test_concat_kv.cu.i
+.PHONY : test_concat_kv.i
+
+# target to preprocess a source file
+test_concat_kv.cu.i:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_concat_kv.dir/build.make tests/unittests/CMakeFiles/test_concat_kv.dir/test_concat_kv.cu.i
+.PHONY : test_concat_kv.cu.i
+
+test_concat_kv.s: test_concat_kv.cu.s
+.PHONY : test_concat_kv.s
+
+# target to generate assembly for a file
+test_concat_kv.cu.s:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_concat_kv.dir/build.make tests/unittests/CMakeFiles/test_concat_kv.dir/test_concat_kv.cu.s
+.PHONY : test_concat_kv.cu.s
+
 test_fused_addresidual_norm.o: test_fused_addresidual_norm.cu.o
 .PHONY : test_fused_addresidual_norm.o
 
@@ -396,6 +448,30 @@ test_linear.cu.s:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/testlinear.dir/build.make tests/unittests/CMakeFiles/testlinear.dir/test_linear.cu.s
 .PHONY : test_linear.cu.s
 
+test_repeat_kv.o: test_repeat_kv.cu.o
+.PHONY : test_repeat_kv.o
+
+# target to build an object file
+test_repeat_kv.cu.o:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_repeat_kv.dir/build.make tests/unittests/CMakeFiles/test_repeat_kv.dir/test_repeat_kv.cu.o
+.PHONY : test_repeat_kv.cu.o
+
+test_repeat_kv.i: test_repeat_kv.cu.i
+.PHONY : test_repeat_kv.i
+
+# target to preprocess a source file
+test_repeat_kv.cu.i:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_repeat_kv.dir/build.make tests/unittests/CMakeFiles/test_repeat_kv.dir/test_repeat_kv.cu.i
+.PHONY : test_repeat_kv.cu.i
+
+test_repeat_kv.s: test_repeat_kv.cu.s
+.PHONY : test_repeat_kv.s
+
+# target to generate assembly for a file
+test_repeat_kv.cu.s:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_repeat_kv.dir/build.make tests/unittests/CMakeFiles/test_repeat_kv.dir/test_repeat_kv.cu.s
+.PHONY : test_repeat_kv.cu.s
+
 test_rmsnorm.o: test_rmsnorm.cu.o
 .PHONY : test_rmsnorm.o
 
@@ -433,8 +509,10 @@ help:
 	@echo "... paddingoffset"
 	@echo "... rmsnorm"
 	@echo "... test_act"
+	@echo "... test_concat_kv"
 	@echo "... test_fused_addresidual_norm"
 	@echo "... test_fused_trans_remv_pad"
+	@echo "... test_repeat_kv"
 	@echo "... testlinear"
 	@echo "... test_act.o"
 	@echo "... test_act.i"
@@ -445,6 +523,9 @@ help:
 	@echo "... test_casual_mask.o"
 	@echo "... test_casual_mask.i"
 	@echo "... test_casual_mask.s"
+	@echo "... test_concat_kv.o"
+	@echo "... test_concat_kv.i"
+	@echo "... test_concat_kv.s"
 	@echo "... test_fused_addresidual_norm.o"
 	@echo "... test_fused_addresidual_norm.i"
 	@echo "... test_fused_addresidual_norm.s"
@@ -457,6 +538,9 @@ help:
 	@echo "... test_linear.o"
 	@echo "... test_linear.i"
 	@echo "... test_linear.s"
+	@echo "... test_repeat_kv.o"
+	@echo "... test_repeat_kv.i"
+	@echo "... test_repeat_kv.s"
 	@echo "... test_rmsnorm.o"
 	@echo "... test_rmsnorm.i"
 	@echo "... test_rmsnorm.s"

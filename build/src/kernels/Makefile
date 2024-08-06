@@ -201,6 +201,34 @@ build_casual_mask/fast:
 .PHONY : build_casual_mask/fast
 
 # Convenience name for target.
+src/kernels/CMakeFiles/concat_kv.dir/rule:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/kernels/CMakeFiles/concat_kv.dir/rule
+.PHONY : src/kernels/CMakeFiles/concat_kv.dir/rule
+
+# Convenience name for target.
+concat_kv: src/kernels/CMakeFiles/concat_kv.dir/rule
+.PHONY : concat_kv
+
+# fast build rule for target.
+concat_kv/fast:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/concat_kv.dir/build.make src/kernels/CMakeFiles/concat_kv.dir/build
+.PHONY : concat_kv/fast
+
+# Convenience name for target.
+src/kernels/CMakeFiles/repeat_kv.dir/rule:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/kernels/CMakeFiles/repeat_kv.dir/rule
+.PHONY : src/kernels/CMakeFiles/repeat_kv.dir/rule
+
+# Convenience name for target.
+repeat_kv: src/kernels/CMakeFiles/repeat_kv.dir/rule
+.PHONY : repeat_kv
+
+# fast build rule for target.
+repeat_kv/fast:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/repeat_kv.dir/build.make src/kernels/CMakeFiles/repeat_kv.dir/build
+.PHONY : repeat_kv/fast
+
+# Convenience name for target.
 src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/rule:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/rule
 .PHONY : src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/rule
@@ -313,6 +341,30 @@ cal_paddingoffset.s: cal_paddingoffset.cu.s
 cal_paddingoffset.cu.s:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/cal_paddingoffset.dir/build.make src/kernels/CMakeFiles/cal_paddingoffset.dir/cal_paddingoffset.cu.s
 .PHONY : cal_paddingoffset.cu.s
+
+concat_past_kv.o: concat_past_kv.cu.o
+.PHONY : concat_past_kv.o
+
+# target to build an object file
+concat_past_kv.cu.o:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/concat_kv.dir/build.make src/kernels/CMakeFiles/concat_kv.dir/concat_past_kv.cu.o
+.PHONY : concat_past_kv.cu.o
+
+concat_past_kv.i: concat_past_kv.cu.i
+.PHONY : concat_past_kv.i
+
+# target to preprocess a source file
+concat_past_kv.cu.i:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/concat_kv.dir/build.make src/kernels/CMakeFiles/concat_kv.dir/concat_past_kv.cu.i
+.PHONY : concat_past_kv.cu.i
+
+concat_past_kv.s: concat_past_kv.cu.s
+.PHONY : concat_past_kv.s
+
+# target to generate assembly for a file
+concat_past_kv.cu.s:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/concat_kv.dir/build.make src/kernels/CMakeFiles/concat_kv.dir/concat_past_kv.cu.s
+.PHONY : concat_past_kv.cu.s
 
 cublas_utils.o: cublas_utils.cc.o
 .PHONY : cublas_utils.o
@@ -434,6 +486,30 @@ linear.cu.s:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/linear.dir/build.make src/kernels/CMakeFiles/linear.dir/linear.cu.s
 .PHONY : linear.cu.s
 
+repeat_kv.o: repeat_kv.cu.o
+.PHONY : repeat_kv.o
+
+# target to build an object file
+repeat_kv.cu.o:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/repeat_kv.dir/build.make src/kernels/CMakeFiles/repeat_kv.dir/repeat_kv.cu.o
+.PHONY : repeat_kv.cu.o
+
+repeat_kv.i: repeat_kv.cu.i
+.PHONY : repeat_kv.i
+
+# target to preprocess a source file
+repeat_kv.cu.i:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/repeat_kv.dir/build.make src/kernels/CMakeFiles/repeat_kv.dir/repeat_kv.cu.i
+.PHONY : repeat_kv.cu.i
+
+repeat_kv.s: repeat_kv.cu.s
+.PHONY : repeat_kv.s
+
+# target to generate assembly for a file
+repeat_kv.cu.s:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/repeat_kv.dir/build.make src/kernels/CMakeFiles/repeat_kv.dir/repeat_kv.cu.s
+.PHONY : repeat_kv.cu.s
+
 rms_norm.o: rms_norm.cu.o
 .PHONY : rms_norm.o
 
@@ -469,11 +545,13 @@ help:
 	@echo "... act"
 	@echo "... build_casual_mask"
 	@echo "... cal_paddingoffset"
+	@echo "... concat_kv"
 	@echo "... cublasWrapper"
 	@echo "... embeddingFunctor"
 	@echo "... fused_addresidual_norm"
 	@echo "... fused_transpose_and_remv_pad"
 	@echo "... linear"
+	@echo "... repeat_kv"
 	@echo "... rmsNormFunctor"
 	@echo "... act_kernel.o"
 	@echo "... act_kernel.i"
@@ -484,6 +562,9 @@ help:
 	@echo "... cal_paddingoffset.o"
 	@echo "... cal_paddingoffset.i"
 	@echo "... cal_paddingoffset.s"
+	@echo "... concat_past_kv.o"
+	@echo "... concat_past_kv.i"
+	@echo "... concat_past_kv.s"
 	@echo "... cublas_utils.o"
 	@echo "... cublas_utils.i"
 	@echo "... cublas_utils.s"
@@ -499,6 +580,9 @@ help:
 	@echo "... linear.o"
 	@echo "... linear.i"
 	@echo "... linear.s"
+	@echo "... repeat_kv.o"
+	@echo "... repeat_kv.i"
+	@echo "... repeat_kv.s"
 	@echo "... rms_norm.o"
 	@echo "... rms_norm.i"
 	@echo "... rms_norm.s"

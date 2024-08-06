@@ -195,6 +195,32 @@ build_casual_mask/fast:
 .PHONY : build_casual_mask/fast
 
 #=============================================================================
+# Target rules for targets named concat_kv
+
+# Build rule for target.
+concat_kv: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 concat_kv
+.PHONY : concat_kv
+
+# fast build rule for target.
+concat_kv/fast:
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/concat_kv.dir/build.make src/kernels/CMakeFiles/concat_kv.dir/build
+.PHONY : concat_kv/fast
+
+#=============================================================================
+# Target rules for targets named repeat_kv
+
+# Build rule for target.
+repeat_kv: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 repeat_kv
+.PHONY : repeat_kv
+
+# fast build rule for target.
+repeat_kv/fast:
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/repeat_kv.dir/build.make src/kernels/CMakeFiles/repeat_kv.dir/build
+.PHONY : repeat_kv/fast
+
+#=============================================================================
 # Target rules for targets named fused_transpose_and_remv_pad
 
 # Build rule for target.
@@ -299,6 +325,32 @@ testlinear/fast:
 .PHONY : testlinear/fast
 
 #=============================================================================
+# Target rules for targets named test_concat_kv
+
+# Build rule for target.
+test_concat_kv: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_concat_kv
+.PHONY : test_concat_kv
+
+# fast build rule for target.
+test_concat_kv/fast:
+	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_concat_kv.dir/build.make tests/unittests/CMakeFiles/test_concat_kv.dir/build
+.PHONY : test_concat_kv/fast
+
+#=============================================================================
+# Target rules for targets named test_repeat_kv
+
+# Build rule for target.
+test_repeat_kv: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_repeat_kv
+.PHONY : test_repeat_kv
+
+# fast build rule for target.
+test_repeat_kv/fast:
+	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_repeat_kv.dir/build.make tests/unittests/CMakeFiles/test_repeat_kv.dir/build
+.PHONY : test_repeat_kv/fast
+
+#=============================================================================
 # Target rules for targets named test_fused_trans_remv_pad
 
 # Build rule for target.
@@ -349,6 +401,7 @@ help:
 	@echo "... build_casual_mask"
 	@echo "... cal_paddingoffset"
 	@echo "... causalmask"
+	@echo "... concat_kv"
 	@echo "... cublasWrapper"
 	@echo "... embedding"
 	@echo "... embeddingFunctor"
@@ -356,11 +409,14 @@ help:
 	@echo "... fused_transpose_and_remv_pad"
 	@echo "... linear"
 	@echo "... paddingoffset"
+	@echo "... repeat_kv"
 	@echo "... rmsNormFunctor"
 	@echo "... rmsnorm"
 	@echo "... test_act"
+	@echo "... test_concat_kv"
 	@echo "... test_fused_addresidual_norm"
 	@echo "... test_fused_trans_remv_pad"
+	@echo "... test_repeat_kv"
 	@echo "... testlinear"
 .PHONY : help
 

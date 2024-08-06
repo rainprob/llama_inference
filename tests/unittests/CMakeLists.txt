@@ -43,6 +43,24 @@ target_link_libraries(  # Libs for test_build_casual_mask
     -lcudadevrt
     linear) 
 
+add_executable(test_concat_kv
+    test_concat_kv.cu
+)
+target_link_libraries(  # Libs for test_qkv_bias_and_rope
+    test_concat_kv PUBLIC
+    -lcudart
+    -lcudadevrt
+    concat_kv) 
+
+add_executable(test_repeat_kv
+    test_repeat_kv.cu
+)
+target_link_libraries( 
+    test_repeat_kv PUBLIC
+    -lcudart
+    -lcudadevrt
+    repeat_kv) 
+
 add_executable(test_fused_trans_remv_pad
     test_fused_trans_remv_pad.cu
 )
