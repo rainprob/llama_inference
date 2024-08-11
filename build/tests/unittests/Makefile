@@ -256,6 +256,20 @@ test_act/fast:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_act.dir/build.make tests/unittests/CMakeFiles/test_act.dir/build
 .PHONY : test_act/fast
 
+# Convenience name for target.
+tests/unittests/CMakeFiles/test_sampling.dir/rule:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/unittests/CMakeFiles/test_sampling.dir/rule
+.PHONY : tests/unittests/CMakeFiles/test_sampling.dir/rule
+
+# Convenience name for target.
+test_sampling: tests/unittests/CMakeFiles/test_sampling.dir/rule
+.PHONY : test_sampling
+
+# fast build rule for target.
+test_sampling/fast:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_sampling.dir/build.make tests/unittests/CMakeFiles/test_sampling.dir/build
+.PHONY : test_sampling/fast
+
 test_act.o: test_act.cu.o
 .PHONY : test_act.o
 
@@ -496,6 +510,30 @@ test_rmsnorm.cu.s:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/rmsnorm.dir/build.make tests/unittests/CMakeFiles/rmsnorm.dir/test_rmsnorm.cu.s
 .PHONY : test_rmsnorm.cu.s
 
+test_sampling.o: test_sampling.cu.o
+.PHONY : test_sampling.o
+
+# target to build an object file
+test_sampling.cu.o:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_sampling.dir/build.make tests/unittests/CMakeFiles/test_sampling.dir/test_sampling.cu.o
+.PHONY : test_sampling.cu.o
+
+test_sampling.i: test_sampling.cu.i
+.PHONY : test_sampling.i
+
+# target to preprocess a source file
+test_sampling.cu.i:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_sampling.dir/build.make tests/unittests/CMakeFiles/test_sampling.dir/test_sampling.cu.i
+.PHONY : test_sampling.cu.i
+
+test_sampling.s: test_sampling.cu.s
+.PHONY : test_sampling.s
+
+# target to generate assembly for a file
+test_sampling.cu.s:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_sampling.dir/build.make tests/unittests/CMakeFiles/test_sampling.dir/test_sampling.cu.s
+.PHONY : test_sampling.cu.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -513,6 +551,7 @@ help:
 	@echo "... test_fused_addresidual_norm"
 	@echo "... test_fused_trans_remv_pad"
 	@echo "... test_repeat_kv"
+	@echo "... test_sampling"
 	@echo "... testlinear"
 	@echo "... test_act.o"
 	@echo "... test_act.i"
@@ -544,6 +583,9 @@ help:
 	@echo "... test_rmsnorm.o"
 	@echo "... test_rmsnorm.i"
 	@echo "... test_rmsnorm.s"
+	@echo "... test_sampling.o"
+	@echo "... test_sampling.i"
+	@echo "... test_sampling.s"
 .PHONY : help
 
 

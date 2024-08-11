@@ -107,6 +107,7 @@ src/kernels/all: src/kernels/CMakeFiles/repeat_kv.dir/all
 src/kernels/all: src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/all
 src/kernels/all: src/kernels/CMakeFiles/fused_addresidual_norm.dir/all
 src/kernels/all: src/kernels/CMakeFiles/act.dir/all
+src/kernels/all: src/kernels/CMakeFiles/sampling.dir/all
 .PHONY : src/kernels/all
 
 # Recursive "preinstall" directory target.
@@ -125,6 +126,7 @@ src/kernels/clean: src/kernels/CMakeFiles/repeat_kv.dir/clean
 src/kernels/clean: src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/clean
 src/kernels/clean: src/kernels/CMakeFiles/fused_addresidual_norm.dir/clean
 src/kernels/clean: src/kernels/CMakeFiles/act.dir/clean
+src/kernels/clean: src/kernels/CMakeFiles/sampling.dir/clean
 .PHONY : src/kernels/clean
 
 #=============================================================================
@@ -156,6 +158,7 @@ tests/unittests/all: tests/unittests/CMakeFiles/test_repeat_kv.dir/all
 tests/unittests/all: tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/all
 tests/unittests/all: tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/all
 tests/unittests/all: tests/unittests/CMakeFiles/test_act.dir/all
+tests/unittests/all: tests/unittests/CMakeFiles/test_sampling.dir/all
 .PHONY : tests/unittests/all
 
 # Recursive "preinstall" directory target.
@@ -173,6 +176,7 @@ tests/unittests/clean: tests/unittests/CMakeFiles/test_repeat_kv.dir/clean
 tests/unittests/clean: tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/clean
 tests/unittests/clean: tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/clean
 tests/unittests/clean: tests/unittests/CMakeFiles/test_act.dir/clean
+tests/unittests/clean: tests/unittests/CMakeFiles/test_sampling.dir/clean
 .PHONY : tests/unittests/clean
 
 #=============================================================================
@@ -462,6 +466,32 @@ src/kernels/CMakeFiles/act.dir/clean:
 .PHONY : src/kernels/CMakeFiles/act.dir/clean
 
 #=============================================================================
+# Target rules for target src/kernels/CMakeFiles/sampling.dir
+
+# All Build rule for target.
+src/kernels/CMakeFiles/sampling.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/sampling.dir/build.make src/kernels/CMakeFiles/sampling.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/sampling.dir/build.make src/kernels/CMakeFiles/sampling.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=42,43,44 "Built target sampling"
+.PHONY : src/kernels/CMakeFiles/sampling.dir/all
+
+# Build rule for subdir invocation for target.
+src/kernels/CMakeFiles/sampling.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/autodl-tmp/llama_inference/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/kernels/CMakeFiles/sampling.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/autodl-tmp/llama_inference/build/CMakeFiles 0
+.PHONY : src/kernels/CMakeFiles/sampling.dir/rule
+
+# Convenience name for target.
+sampling: src/kernels/CMakeFiles/sampling.dir/rule
+.PHONY : sampling
+
+# clean rule for target.
+src/kernels/CMakeFiles/sampling.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/sampling.dir/build.make src/kernels/CMakeFiles/sampling.dir/clean
+.PHONY : src/kernels/CMakeFiles/sampling.dir/clean
+
+#=============================================================================
 # Target rules for target tests/unittests/CMakeFiles/embedding.dir
 
 # All Build rule for target.
@@ -573,7 +603,7 @@ tests/unittests/CMakeFiles/testlinear.dir/all: src/kernels/CMakeFiles/cublasWrap
 tests/unittests/CMakeFiles/testlinear.dir/all: src/kernels/CMakeFiles/linear.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/testlinear.dir/build.make tests/unittests/CMakeFiles/testlinear.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/testlinear.dir/build.make tests/unittests/CMakeFiles/testlinear.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=52,53 "Built target testlinear"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=57,58 "Built target testlinear"
 .PHONY : tests/unittests/CMakeFiles/testlinear.dir/all
 
 # Build rule for subdir invocation for target.
@@ -599,7 +629,7 @@ tests/unittests/CMakeFiles/testlinear.dir/clean:
 tests/unittests/CMakeFiles/test_concat_kv.dir/all: src/kernels/CMakeFiles/concat_kv.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_concat_kv.dir/build.make tests/unittests/CMakeFiles/test_concat_kv.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_concat_kv.dir/build.make tests/unittests/CMakeFiles/test_concat_kv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=44,45 "Built target test_concat_kv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=47,48 "Built target test_concat_kv"
 .PHONY : tests/unittests/CMakeFiles/test_concat_kv.dir/all
 
 # Build rule for subdir invocation for target.
@@ -625,7 +655,7 @@ tests/unittests/CMakeFiles/test_concat_kv.dir/clean:
 tests/unittests/CMakeFiles/test_repeat_kv.dir/all: src/kernels/CMakeFiles/repeat_kv.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_repeat_kv.dir/build.make tests/unittests/CMakeFiles/test_repeat_kv.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_repeat_kv.dir/build.make tests/unittests/CMakeFiles/test_repeat_kv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=50,51 "Built target test_repeat_kv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=53,54 "Built target test_repeat_kv"
 .PHONY : tests/unittests/CMakeFiles/test_repeat_kv.dir/all
 
 # Build rule for subdir invocation for target.
@@ -651,7 +681,7 @@ tests/unittests/CMakeFiles/test_repeat_kv.dir/clean:
 tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/all: src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/build.make tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/build.make tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=48,49 "Built target test_fused_trans_remv_pad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=51,52 "Built target test_fused_trans_remv_pad"
 .PHONY : tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/all
 
 # Build rule for subdir invocation for target.
@@ -677,7 +707,7 @@ tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/clean:
 tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/all: src/kernels/CMakeFiles/fused_addresidual_norm.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/build.make tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/build.make tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=46,47 "Built target test_fused_addresidual_norm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=49,50 "Built target test_fused_addresidual_norm"
 .PHONY : tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/all
 
 # Build rule for subdir invocation for target.
@@ -703,7 +733,7 @@ tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/clean:
 tests/unittests/CMakeFiles/test_act.dir/all: src/kernels/CMakeFiles/act.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_act.dir/build.make tests/unittests/CMakeFiles/test_act.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_act.dir/build.make tests/unittests/CMakeFiles/test_act.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=42,43 "Built target test_act"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=45,46 "Built target test_act"
 .PHONY : tests/unittests/CMakeFiles/test_act.dir/all
 
 # Build rule for subdir invocation for target.
@@ -721,6 +751,32 @@ test_act: tests/unittests/CMakeFiles/test_act.dir/rule
 tests/unittests/CMakeFiles/test_act.dir/clean:
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_act.dir/build.make tests/unittests/CMakeFiles/test_act.dir/clean
 .PHONY : tests/unittests/CMakeFiles/test_act.dir/clean
+
+#=============================================================================
+# Target rules for target tests/unittests/CMakeFiles/test_sampling.dir
+
+# All Build rule for target.
+tests/unittests/CMakeFiles/test_sampling.dir/all: src/kernels/CMakeFiles/sampling.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_sampling.dir/build.make tests/unittests/CMakeFiles/test_sampling.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_sampling.dir/build.make tests/unittests/CMakeFiles/test_sampling.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/autodl-tmp/llama_inference/build/CMakeFiles --progress-num=55,56 "Built target test_sampling"
+.PHONY : tests/unittests/CMakeFiles/test_sampling.dir/all
+
+# Build rule for subdir invocation for target.
+tests/unittests/CMakeFiles/test_sampling.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/autodl-tmp/llama_inference/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/unittests/CMakeFiles/test_sampling.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/autodl-tmp/llama_inference/build/CMakeFiles 0
+.PHONY : tests/unittests/CMakeFiles/test_sampling.dir/rule
+
+# Convenience name for target.
+test_sampling: tests/unittests/CMakeFiles/test_sampling.dir/rule
+.PHONY : test_sampling
+
+# clean rule for target.
+tests/unittests/CMakeFiles/test_sampling.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_sampling.dir/build.make tests/unittests/CMakeFiles/test_sampling.dir/clean
+.PHONY : tests/unittests/CMakeFiles/test_sampling.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

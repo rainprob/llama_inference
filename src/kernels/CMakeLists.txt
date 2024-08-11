@@ -53,3 +53,8 @@ add_library(act STATIC act_kernel.cu)
 set_property(TARGET act PROPERTY CUDA_SEPARABLE_COMPILATION   ON)
 set_property(TARGET act PROPERTY POSITION_INDEPENDENT_CODE  ON)
 set_property(TARGET act PROPERTY CUDA_RESOLVE_DEVICE_SYMBOLS  ON)
+
+add_library(sampling STATIC sampling.cu)
+set_property(TARGET sampling PROPERTY CUDA_SEPARABLE_COMPILATION   ON)
+set_property(TARGET sampling PROPERTY POSITION_INDEPENDENT_CODE  ON)
+set_property(TARGET sampling PROPERTY CUDA_RESOLVE_DEVICE_SYMBOLS  ON)

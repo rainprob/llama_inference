@@ -70,6 +70,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir/DependInfo.cmake"
   "src/kernels/CMakeFiles/fused_addresidual_norm.dir/DependInfo.cmake"
   "src/kernels/CMakeFiles/act.dir/DependInfo.cmake"
+  "src/kernels/CMakeFiles/sampling.dir/DependInfo.cmake"
   "tests/unittests/CMakeFiles/embedding.dir/DependInfo.cmake"
   "tests/unittests/CMakeFiles/rmsnorm.dir/DependInfo.cmake"
   "tests/unittests/CMakeFiles/paddingoffset.dir/DependInfo.cmake"
@@ -80,4 +81,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir/DependInfo.cmake"
   "tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir/DependInfo.cmake"
   "tests/unittests/CMakeFiles/test_act.dir/DependInfo.cmake"
+  "tests/unittests/CMakeFiles/test_sampling.dir/DependInfo.cmake"
   )

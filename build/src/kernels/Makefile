@@ -270,6 +270,20 @@ act/fast:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/act.dir/build.make src/kernels/CMakeFiles/act.dir/build
 .PHONY : act/fast
 
+# Convenience name for target.
+src/kernels/CMakeFiles/sampling.dir/rule:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/kernels/CMakeFiles/sampling.dir/rule
+.PHONY : src/kernels/CMakeFiles/sampling.dir/rule
+
+# Convenience name for target.
+sampling: src/kernels/CMakeFiles/sampling.dir/rule
+.PHONY : sampling
+
+# fast build rule for target.
+sampling/fast:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/sampling.dir/build.make src/kernels/CMakeFiles/sampling.dir/build
+.PHONY : sampling/fast
+
 act_kernel.o: act_kernel.cu.o
 .PHONY : act_kernel.o
 
@@ -534,6 +548,30 @@ rms_norm.cu.s:
 	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/rmsNormFunctor.dir/build.make src/kernels/CMakeFiles/rmsNormFunctor.dir/rms_norm.cu.s
 .PHONY : rms_norm.cu.s
 
+sampling.o: sampling.cu.o
+.PHONY : sampling.o
+
+# target to build an object file
+sampling.cu.o:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/sampling.dir/build.make src/kernels/CMakeFiles/sampling.dir/sampling.cu.o
+.PHONY : sampling.cu.o
+
+sampling.i: sampling.cu.i
+.PHONY : sampling.i
+
+# target to preprocess a source file
+sampling.cu.i:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/sampling.dir/build.make src/kernels/CMakeFiles/sampling.dir/sampling.cu.i
+.PHONY : sampling.cu.i
+
+sampling.s: sampling.cu.s
+.PHONY : sampling.s
+
+# target to generate assembly for a file
+sampling.cu.s:
+	cd /root/autodl-tmp/llama_inference/build && $(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/sampling.dir/build.make src/kernels/CMakeFiles/sampling.dir/sampling.cu.s
+.PHONY : sampling.cu.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -553,6 +591,7 @@ help:
 	@echo "... linear"
 	@echo "... repeat_kv"
 	@echo "... rmsNormFunctor"
+	@echo "... sampling"
 	@echo "... act_kernel.o"
 	@echo "... act_kernel.i"
 	@echo "... act_kernel.s"
@@ -586,6 +625,9 @@ help:
 	@echo "... rms_norm.o"
 	@echo "... rms_norm.i"
 	@echo "... rms_norm.s"
+	@echo "... sampling.o"
+	@echo "... sampling.i"
+	@echo "... sampling.s"
 .PHONY : help
 
 

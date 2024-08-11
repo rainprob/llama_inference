@@ -260,6 +260,19 @@ act/fast:
 .PHONY : act/fast
 
 #=============================================================================
+# Target rules for targets named sampling
+
+# Build rule for target.
+sampling: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sampling
+.PHONY : sampling
+
+# fast build rule for target.
+sampling/fast:
+	$(MAKE) $(MAKESILENT) -f src/kernels/CMakeFiles/sampling.dir/build.make src/kernels/CMakeFiles/sampling.dir/build
+.PHONY : sampling/fast
+
+#=============================================================================
 # Target rules for targets named embedding
 
 # Build rule for target.
@@ -389,6 +402,19 @@ test_act/fast:
 	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_act.dir/build.make tests/unittests/CMakeFiles/test_act.dir/build
 .PHONY : test_act/fast
 
+#=============================================================================
+# Target rules for targets named test_sampling
+
+# Build rule for target.
+test_sampling: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_sampling
+.PHONY : test_sampling
+
+# fast build rule for target.
+test_sampling/fast:
+	$(MAKE) $(MAKESILENT) -f tests/unittests/CMakeFiles/test_sampling.dir/build.make tests/unittests/CMakeFiles/test_sampling.dir/build
+.PHONY : test_sampling/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -412,11 +438,13 @@ help:
 	@echo "... repeat_kv"
 	@echo "... rmsNormFunctor"
 	@echo "... rmsnorm"
+	@echo "... sampling"
 	@echo "... test_act"
 	@echo "... test_concat_kv"
 	@echo "... test_fused_addresidual_norm"
 	@echo "... test_fused_trans_remv_pad"
 	@echo "... test_repeat_kv"
+	@echo "... test_sampling"
 	@echo "... testlinear"
 .PHONY : help
 

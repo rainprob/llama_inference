@@ -13,6 +13,7 @@
 /root/autodl-tmp/llama_inference/build/src/kernels/CMakeFiles/fused_transpose_and_remv_pad.dir
 /root/autodl-tmp/llama_inference/build/src/kernels/CMakeFiles/fused_addresidual_norm.dir
 /root/autodl-tmp/llama_inference/build/src/kernels/CMakeFiles/act.dir
+/root/autodl-tmp/llama_inference/build/src/kernels/CMakeFiles/sampling.dir
 /root/autodl-tmp/llama_inference/build/src/kernels/CMakeFiles/edit_cache.dir
 /root/autodl-tmp/llama_inference/build/src/kernels/CMakeFiles/rebuild_cache.dir
 /root/autodl-tmp/llama_inference/build/tests/CMakeFiles/edit_cache.dir
@@ -27,5 +28,6 @@
 /root/autodl-tmp/llama_inference/build/tests/unittests/CMakeFiles/test_fused_trans_remv_pad.dir
 /root/autodl-tmp/llama_inference/build/tests/unittests/CMakeFiles/test_fused_addresidual_norm.dir
 /root/autodl-tmp/llama_inference/build/tests/unittests/CMakeFiles/test_act.dir
+/root/autodl-tmp/llama_inference/build/tests/unittests/CMakeFiles/test_sampling.dir
 /root/autodl-tmp/llama_inference/build/tests/unittests/CMakeFiles/edit_cache.dir
 /root/autodl-tmp/llama_inference/build/tests/unittests/CMakeFiles/rebuild_cache.dir
